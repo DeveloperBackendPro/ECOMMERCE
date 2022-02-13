@@ -1,0 +1,282 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Belle Multipurpose Bootstrap 4 Html Template</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+</head>
+<body class="template-index belle template-index-belle" oncontextmenu="return false">
+
+    <!--Top Header-->
+    {% include 'header.html' %}
+    <!--Body Content-->
+    <div id="page-content">
+        <!--Home slider-->
+        <div class="slideshow slideshow-wrapper pb-section sliderFull">
+            <div class="home-slideshow">
+                {% for rs in slider %}
+                <div class="slide">
+                    <div class="blur-up lazyload bg-size">
+                        <img class="blur-up lazyload bg-img"
+                             data-src="{{ rs.image.url }}"
+                             src="{{ rs.image.url }}"
+                             alt="Summer Bikini Collection"
+                             title="Summer Bikini Collection"/>
+                        <div class="slideshow__text-wrap slideshow__overlay classic bottom">
+                            <div class="slideshow__text-content bottom">
+                                <div class="wrap-caption center">
+                                    <h2 class="h1 mega-title slideshow__title">{{ rs.title }}</h2>
+                                    <span class="mega-subtitle slideshow__subtitle">{{ rs.description }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="tab-slider-product section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">{% trans 'New Arrivals'%}</h2>
+                            <p>{% trans 'Browse the huge variety of our products'%}</p>
+                        </div>
+                        <div class="tabs-listing">
+                            <div class="tab_container">
+                                <div id="tab1" class="tab_content grid-products">
+                                    <div class="productSlider">
+                                        {% for rs in product_latest %}
+                                            <div class="col-12 item">
+                                                <div class="product-image">
+                                                    <a href="{% url 'produc_details' rs.id rs.slug %}">
+                                                        <img class=""
+                                                             data-src="{{ rs.image.url }}" src="{{ rs.image.url }}"
+                                                             alt="image" title="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-details text-center">
+                                                    <div class="product-name">
+                                                        <a href="{% url 'produc_details' rs.id rs.slug %}">{{ rs.title }}</a>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span class="old-price">{{ rs.old_price }} sum</span>
+                                                        <span class="price">{{ rs.sell_price }} sum</span>
+                                                    </div>
+                                                    <div class="product-review">
+                                                    <i class='font-13 fa fa-star{% if rs.avaregereview < 1 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if rs.avaregereview < 2 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if rs.avaregereview < 3 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if rs.avaregereview < 4 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if rs.avaregereview < 5 %}-o empty{% endif%}'></i>
+{#                                                     {{ rs.avaregereview |stringformat:".2f"}}#}
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Collection Tab slider-->
+
+        <!--Collection Box slider-->
+        <div class="collection-box section">
+            <div class="container-fluid">
+                <div class="collection-grid">
+                    {% for rs in category %}
+                        <div class="collection-grid-item">
+                            <a href="{% url 'category_product' rs.id rs.slug %}" class="collection-grid-item__link">
+                                <img data-src="{{ rs.image.url }}"
+                                     src="{{ rs.image.url }}" alt="Fashion" class="blur-up lazyload"/>
+                                <div class="collection-grid-item__title-wrapper">
+                                    <h3 class="collection-grid-item__title btn btn--secondary no-border">{{ rs.title }}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="section logo-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="logo-bar">
+                            <div class="logo-bar__item">
+                                <img src="{% static 'assets/images/logo/brandlogo1.png'%}" alt="" title=""/>
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="{% static 'assets/images/logo/brandlogo2.png'%}" alt="" title=""/>
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="{% static 'assets/images/logo/brandlogo3.png'%}" alt="" title=""/>
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="{% static 'assets/images/logo/brandlogo4.png'%}" alt="" title=""/>
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="{% static 'assets/images/logo/brandlogo5.png'%}" alt="" title=""/>
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="{% static 'assets/images/logo/brandlogo6.png'%}" alt="" title=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-rows section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">{% trans 'Featured collection'%}</h2>
+                            <p>{% trans 'Our most popular products based on sales'%}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-products">
+                    <div class="row">
+                        {% for rs in product_slider %}
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
+                                <div class="grid-view_image">
+                                    <a href="{% url 'produc_details' rs.id rs.slug %}" class="grid-view-item__link">
+                                        <img class="grid-view-item__image"
+                                             src="{{ rs.image.url }}">
+                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
+                                            <span
+                                                    class="lbl pr-label1">{% trans 'new'%}</span></div>
+                                    </a>
+
+                                    <div class="product-details hoverDetails text-center mobile">
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="latest-blog section pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">{% trans 'Latest From our Blog'%}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="wrap-blog">
+                            <a href="#" class="article__grid-image">
+                                <img src="{% static 'assets/images/blog/post-img1.jpg' %}"
+                                     alt="It's all about how you wear"
+                                     title="It's all about how you wear" class="blur-up lazyloaded"/>
+                            </a>
+                            <div class="article__grid-meta article__grid-meta--has-image">
+                                <div class="wrap-blog-inner">
+                                    <h2 class="h3 article__title">
+                                        <a href="#">{% trans "It's all about how you wear"%}</a>
+                                    </h2>
+                                    <span class="article__date">{% trans 'May 02, 2017'%}</span>
+                                    <div class="rte article__grid-excerpt">
+                                        {% trans "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account..."%}
+                                    </div>
+                                    <ul class="list--inline article__meta-buttons">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="wrap-blog">
+                            <a href="#" class="article__grid-image">
+                                <img src="{% static 'assets/images/blog/post-img2.jpg' %}"
+                                     alt="27 Days of Spring Fashion Recap"
+                                     title="27 Days of Spring Fashion Recap" class="blur-up lazyloaded"/>
+                            </a>
+                            <div class="article__grid-meta article__grid-meta--has-image">
+                                <div class="wrap-blog-inner">
+                                    <h2 class="h3 article__title">
+                                        <a href="#">{% trans '27 Days of Spring Fashion Recap'%}</a>
+                                    </h2>
+                                    <span class="article__date">May 02, 2017</span>
+                                    <div class="rte article__grid-excerpt">
+                                        {% trans "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab..."%}
+                                    </div>
+                                    <ul class="list--inline article__meta-buttons">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="store-feature section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul class="display-table store-info">
+                            <li class="display-table-cell">
+                                <i class="icon anm anm-truck-l"></i>
+                                <h5>{% trans 'Free Shipping &amp; Return'%}</h5>
+                                <span class="sub-text">{% trans 'Free shipping on all US orders'%}</span>
+                            </li>
+                            <li class="display-table-cell">
+                                <i class="icon anm anm-dollar-sign-r"></i>
+                                <h5>{% trans 'Money Guarantee'%}</h5>
+                                <span class="sub-text">{% trans '30 days money back guarantee'%}</span>
+                            </li>
+                            <li class="display-table-cell">
+                                <i class="icon anm anm-comments-l"></i>
+                                <h5>{% trans 'Online Support'%}</h5>
+                                <span class="sub-text">{% trans 'We support online 24/7 on day'%}</span>
+                            </li>
+                            <li class="display-table-cell">
+                                <i class="icon anm anm-credit-card-front-r"></i>
+                                <h5>{% trans 'Secure Payments'%}</h5>
+                                <span class="sub-text">{% trans 'All payment are Secured and trusted.'%}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.cookie.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/lazysizes.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

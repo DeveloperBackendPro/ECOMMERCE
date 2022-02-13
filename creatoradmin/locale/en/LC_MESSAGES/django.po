@@ -1,0 +1,1129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-13 01:44+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: creatoradmin/templates/Aboutus/about_edit.html:52
+#: creatoradmin/templates/Aboutus/about_update.html:52
+#: creatoradmin/templates/Aboutus/add_about.html:52
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:52
+#: creatoradmin/templates/Add_Creator/get_users.html:52
+#: creatoradmin/templates/Authenticate/user_password.html:52
+#: creatoradmin/templates/Authenticate/user_update.html:52
+#: creatoradmin/templates/Blog/add_blog.html:52
+#: creatoradmin/templates/Blog/blog_edit.html:52
+#: creatoradmin/templates/Blog/blog_update.html:52
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:52
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:52
+#: creatoradmin/templates/Category/add-category.html:52
+#: creatoradmin/templates/Category/category_edit.html:52
+#: creatoradmin/templates/Category/category_update.html:52
+#: creatoradmin/templates/Contact/contact_edit.html:52
+#: creatoradmin/templates/Contact/contact_get.html:52
+#: creatoradmin/templates/Creator/creator.html:46
+#: creatoradmin/templates/Details/add_details.html:53
+#: creatoradmin/templates/Details/detail_edit.html:53
+#: creatoradmin/templates/Details/details_update.html:52
+#: creatoradmin/templates/Faq/add_faq.html:52
+#: creatoradmin/templates/Faq/faq_edit.html:52
+#: creatoradmin/templates/Faq/faq_update.html:52
+#: creatoradmin/templates/Informations/add_informatsion.html:52
+#: creatoradmin/templates/Informations/info_edit.html:52
+#: creatoradmin/templates/Informations/info_update.html:52
+#: creatoradmin/templates/Newslatter/newslatter_get.html:52
+#: creatoradmin/templates/Orders/order_detail.html:50
+#: creatoradmin/templates/Orders/order_edit.html:49
+#: creatoradmin/templates/Orders/orders_page.html:57
+#: creatoradmin/templates/Product/add_product.html:52
+#: creatoradmin/templates/Product/product_edit.html:52
+#: creatoradmin/templates/Product/product_update.html:52
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:52
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:52
+#: creatoradmin/templates/Product_gallery/gallery.html:52
+#: creatoradmin/templates/Product_gallery/gallery_id.html:52
+#: creatoradmin/templates/Searched/searched.html:52
+#: creatoradmin/templates/Slider/add_slider.html:52
+#: creatoradmin/templates/Slider/edit_slider.html:52
+#: creatoradmin/templates/Slider/update_slider.html:52
+msgid "Create Category"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:57
+#: creatoradmin/templates/Aboutus/about_update.html:57
+#: creatoradmin/templates/Aboutus/add_about.html:57
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:57
+#: creatoradmin/templates/Add_Creator/get_users.html:57
+#: creatoradmin/templates/Authenticate/user_password.html:57
+#: creatoradmin/templates/Authenticate/user_update.html:57
+#: creatoradmin/templates/Blog/add_blog.html:57
+#: creatoradmin/templates/Blog/blog_edit.html:57
+#: creatoradmin/templates/Blog/blog_update.html:57
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:57
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:57
+#: creatoradmin/templates/Category/add-category.html:57
+#: creatoradmin/templates/Category/category_edit.html:57
+#: creatoradmin/templates/Category/category_update.html:57
+#: creatoradmin/templates/Contact/contact_edit.html:57
+#: creatoradmin/templates/Contact/contact_get.html:57
+#: creatoradmin/templates/Creator/creator.html:51
+#: creatoradmin/templates/Details/add_details.html:58
+#: creatoradmin/templates/Details/detail_edit.html:58
+#: creatoradmin/templates/Details/details_update.html:57
+#: creatoradmin/templates/Faq/add_faq.html:57
+#: creatoradmin/templates/Faq/faq_edit.html:57
+#: creatoradmin/templates/Faq/faq_update.html:57
+#: creatoradmin/templates/Informations/add_informatsion.html:57
+#: creatoradmin/templates/Informations/info_edit.html:57
+#: creatoradmin/templates/Informations/info_update.html:57
+#: creatoradmin/templates/Newslatter/newslatter_get.html:57
+#: creatoradmin/templates/Orders/order_detail.html:55
+#: creatoradmin/templates/Orders/order_edit.html:54
+#: creatoradmin/templates/Orders/orders_page.html:62
+#: creatoradmin/templates/Product/add_product.html:57
+#: creatoradmin/templates/Product/product_edit.html:57
+#: creatoradmin/templates/Product/product_update.html:57
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:57
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:57
+#: creatoradmin/templates/Product_gallery/gallery.html:57
+#: creatoradmin/templates/Product_gallery/gallery_id.html:57
+#: creatoradmin/templates/Searched/searched.html:57
+#: creatoradmin/templates/Slider/add_slider.html:57
+#: creatoradmin/templates/Slider/edit_slider.html:57
+#: creatoradmin/templates/Slider/update_slider.html:57
+msgid "Create Product"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:88
+#: creatoradmin/templates/Aboutus/about_update.html:88
+#: creatoradmin/templates/Aboutus/add_about.html:88
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:88
+#: creatoradmin/templates/Add_Creator/get_users.html:88
+#: creatoradmin/templates/Authenticate/user_password.html:88
+#: creatoradmin/templates/Authenticate/user_update.html:88
+#: creatoradmin/templates/Blog/add_blog.html:88
+#: creatoradmin/templates/Blog/blog_edit.html:88
+#: creatoradmin/templates/Blog/blog_update.html:88
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:88
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:88
+#: creatoradmin/templates/Category/add-category.html:88
+#: creatoradmin/templates/Category/category_edit.html:88
+#: creatoradmin/templates/Category/category_update.html:88
+#: creatoradmin/templates/Clients/client.html:72
+#: creatoradmin/templates/Contact/contact_edit.html:88
+#: creatoradmin/templates/Contact/contact_get.html:88
+#: creatoradmin/templates/Creator/creator.html:82
+#: creatoradmin/templates/Details/add_details.html:89
+#: creatoradmin/templates/Details/detail_edit.html:89
+#: creatoradmin/templates/Details/details_update.html:88
+#: creatoradmin/templates/Faq/add_faq.html:88
+#: creatoradmin/templates/Faq/faq_edit.html:88
+#: creatoradmin/templates/Faq/faq_update.html:88
+#: creatoradmin/templates/Informations/add_informatsion.html:88
+#: creatoradmin/templates/Informations/info_edit.html:88
+#: creatoradmin/templates/Informations/info_update.html:88
+#: creatoradmin/templates/Newslatter/newslatter_get.html:88
+#: creatoradmin/templates/Orders/order_detail.html:86
+#: creatoradmin/templates/Orders/order_edit.html:85
+#: creatoradmin/templates/Orders/orders_page.html:93
+#: creatoradmin/templates/Product/add_product.html:88
+#: creatoradmin/templates/Product/product_edit.html:88
+#: creatoradmin/templates/Product/product_update.html:88
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:88
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:88
+#: creatoradmin/templates/Product_gallery/gallery.html:88
+#: creatoradmin/templates/Product_gallery/gallery_id.html:88
+#: creatoradmin/templates/Searched/searched.html:88
+#: creatoradmin/templates/Slider/add_slider.html:88
+#: creatoradmin/templates/Slider/edit_slider.html:88
+#: creatoradmin/templates/Slider/update_slider.html:88
+msgid "Update"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:93
+#: creatoradmin/templates/Aboutus/about_update.html:93
+#: creatoradmin/templates/Aboutus/add_about.html:93
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:93
+#: creatoradmin/templates/Add_Creator/get_users.html:93
+#: creatoradmin/templates/Authenticate/user_password.html:93
+#: creatoradmin/templates/Authenticate/user_update.html:93
+#: creatoradmin/templates/Blog/add_blog.html:93
+#: creatoradmin/templates/Blog/blog_edit.html:93
+#: creatoradmin/templates/Blog/blog_update.html:93
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:93
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:93
+#: creatoradmin/templates/Category/add-category.html:93
+#: creatoradmin/templates/Category/category_edit.html:93
+#: creatoradmin/templates/Category/category_update.html:93
+#: creatoradmin/templates/Clients/client.html:77
+#: creatoradmin/templates/Contact/contact_edit.html:93
+#: creatoradmin/templates/Contact/contact_get.html:93
+#: creatoradmin/templates/Creator/creator.html:87
+#: creatoradmin/templates/Details/add_details.html:94
+#: creatoradmin/templates/Details/detail_edit.html:94
+#: creatoradmin/templates/Details/details_update.html:93
+#: creatoradmin/templates/Faq/add_faq.html:93
+#: creatoradmin/templates/Faq/faq_edit.html:93
+#: creatoradmin/templates/Faq/faq_update.html:93
+#: creatoradmin/templates/Informations/add_informatsion.html:93
+#: creatoradmin/templates/Informations/info_edit.html:93
+#: creatoradmin/templates/Informations/info_update.html:93
+#: creatoradmin/templates/Navbar/navbar.html:222
+#: creatoradmin/templates/Navbar/navbar_clinet.html:58
+#: creatoradmin/templates/Newslatter/newslatter_get.html:93
+#: creatoradmin/templates/Orders/order_detail.html:91
+#: creatoradmin/templates/Orders/order_edit.html:90
+#: creatoradmin/templates/Orders/orders_page.html:98
+#: creatoradmin/templates/Product/add_product.html:93
+#: creatoradmin/templates/Product/product_edit.html:93
+#: creatoradmin/templates/Product/product_update.html:93
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:93
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:93
+#: creatoradmin/templates/Product_gallery/gallery.html:93
+#: creatoradmin/templates/Product_gallery/gallery_id.html:93
+#: creatoradmin/templates/Searched/searched.html:93
+#: creatoradmin/templates/Slider/add_slider.html:93
+#: creatoradmin/templates/Slider/edit_slider.html:93
+#: creatoradmin/templates/Slider/update_slider.html:93
+msgid "Logout"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:139
+#: creatoradmin/templates/Blog/add_blog.html:139
+#: creatoradmin/templates/Blog/blog_edit.html:139
+#: creatoradmin/templates/Blog/blog_update.html:140
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:149
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:150
+msgid "Blog"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:147
+#: creatoradmin/templates/Aboutus/about_update.html:149
+#: creatoradmin/templates/Aboutus/add_about.html:146
+#: creatoradmin/templates/Blog/add_blog.html:146
+#: creatoradmin/templates/Blog/blog_edit.html:147
+#: creatoradmin/templates/Blog/blog_update.html:149
+#: creatoradmin/templates/Category/add-category.html:146
+#: creatoradmin/templates/Category/category_edit.html:147
+#: creatoradmin/templates/Category/category_update.html:149
+#: creatoradmin/templates/Informations/add_informatsion.html:147
+#: creatoradmin/templates/Informations/info_edit.html:147
+#: creatoradmin/templates/Informations/info_update.html:149
+#: creatoradmin/templates/Product/add_product.html:153
+#: creatoradmin/templates/Product/product_edit.html:153
+#: creatoradmin/templates/Product/product_update.html:153
+#: creatoradmin/templates/Slider/add_slider.html:146
+#: creatoradmin/templates/Slider/edit_slider.html:147
+#: creatoradmin/templates/Slider/update_slider.html:148
+msgid "Title EN"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:152
+#: creatoradmin/templates/Aboutus/about_update.html:154
+#: creatoradmin/templates/Aboutus/add_about.html:151
+#: creatoradmin/templates/Blog/add_blog.html:151
+#: creatoradmin/templates/Blog/blog_edit.html:152
+#: creatoradmin/templates/Blog/blog_update.html:154
+#: creatoradmin/templates/Category/add-category.html:151
+#: creatoradmin/templates/Category/category_edit.html:152
+#: creatoradmin/templates/Category/category_update.html:154
+#: creatoradmin/templates/Informations/add_informatsion.html:152
+#: creatoradmin/templates/Informations/info_edit.html:152
+#: creatoradmin/templates/Informations/info_update.html:154
+#: creatoradmin/templates/Product/add_product.html:158
+#: creatoradmin/templates/Product/product_edit.html:158
+#: creatoradmin/templates/Product/product_update.html:158
+#: creatoradmin/templates/Slider/add_slider.html:151
+#: creatoradmin/templates/Slider/edit_slider.html:152
+#: creatoradmin/templates/Slider/update_slider.html:153
+msgid "Title RU"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:157
+#: creatoradmin/templates/Aboutus/about_update.html:159
+#: creatoradmin/templates/Aboutus/add_about.html:156
+#: creatoradmin/templates/Blog/add_blog.html:156
+#: creatoradmin/templates/Blog/blog_edit.html:157
+#: creatoradmin/templates/Blog/blog_update.html:159
+#: creatoradmin/templates/Category/add-category.html:156
+#: creatoradmin/templates/Category/category_edit.html:157
+#: creatoradmin/templates/Category/category_update.html:159
+#: creatoradmin/templates/Informations/add_informatsion.html:157
+#: creatoradmin/templates/Informations/info_edit.html:157
+#: creatoradmin/templates/Informations/info_update.html:159
+#: creatoradmin/templates/Product/add_product.html:163
+#: creatoradmin/templates/Product/product_edit.html:163
+#: creatoradmin/templates/Product/product_update.html:163
+#: creatoradmin/templates/Slider/add_slider.html:156
+#: creatoradmin/templates/Slider/edit_slider.html:157
+#: creatoradmin/templates/Slider/update_slider.html:158
+msgid "Title UZ"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:164
+#: creatoradmin/templates/Aboutus/add_about.html:163
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:175
+#: creatoradmin/templates/Authenticate/user_update.html:188
+#: creatoradmin/templates/Blog/add_blog.html:163
+#: creatoradmin/templates/Blog/blog_edit.html:164
+#: creatoradmin/templates/Category/add-category.html:162
+#: creatoradmin/templates/Category/category_edit.html:169
+#: creatoradmin/templates/Clients/user_update_client.html:186
+#: creatoradmin/templates/Details/add_details.html:168
+#: creatoradmin/templates/Details/detail_edit.html:168
+#: creatoradmin/templates/Informations/add_informatsion.html:217
+#: creatoradmin/templates/Informations/info_edit.html:217
+#: creatoradmin/templates/Product/add_product.html:179
+#: creatoradmin/templates/Product/product_edit.html:179
+#: creatoradmin/templates/Slider/add_slider.html:163
+#: creatoradmin/templates/Slider/edit_slider.html:164
+msgid "Image"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:169
+#: creatoradmin/templates/Aboutus/add_about.html:168
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:180
+#: creatoradmin/templates/Authenticate/user_update.html:193
+#: creatoradmin/templates/Blog/add_blog.html:168
+#: creatoradmin/templates/Blog/blog_edit.html:169
+#: creatoradmin/templates/Category/add-category.html:167
+#: creatoradmin/templates/Category/category_edit.html:174
+#: creatoradmin/templates/Clients/user_update_client.html:191
+#: creatoradmin/templates/Details/add_details.html:173
+#: creatoradmin/templates/Details/detail_edit.html:173
+#: creatoradmin/templates/Informations/add_informatsion.html:222
+#: creatoradmin/templates/Informations/info_edit.html:222
+#: creatoradmin/templates/Product/add_product.html:184
+#: creatoradmin/templates/Product/product_edit.html:184
+#: creatoradmin/templates/Slider/add_slider.html:168
+#: creatoradmin/templates/Slider/edit_slider.html:169
+msgid "Upload"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:177
+#: creatoradmin/templates/Aboutus/about_update.html:165
+#: creatoradmin/templates/Aboutus/add_about.html:176
+#: creatoradmin/templates/Blog/add_blog.html:176
+#: creatoradmin/templates/Blog/blog_edit.html:177
+#: creatoradmin/templates/Blog/blog_update.html:165
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:171
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:172
+#: creatoradmin/templates/Category/add-category.html:178
+#: creatoradmin/templates/Category/category_update.html:170
+#: creatoradmin/templates/Clients/client.html:146
+#: creatoradmin/templates/Contact/contact_edit.html:176
+#: creatoradmin/templates/Contact/contact_get.html:177
+#: creatoradmin/templates/Creator/creator.html:200
+#: creatoradmin/templates/Creator/creator.html:317
+#: creatoradmin/templates/Faq/add_faq.html:168
+#: creatoradmin/templates/Faq/faq_edit.html:168
+#: creatoradmin/templates/Faq/faq_update.html:172
+#: creatoradmin/templates/Informations/add_informatsion.html:249
+#: creatoradmin/templates/Informations/info_edit.html:248
+#: creatoradmin/templates/Informations/info_update.html:239
+#: creatoradmin/templates/Orders/order_detail.html:167
+#: creatoradmin/templates/Orders/order_detail.html:172
+#: creatoradmin/templates/Orders/orders_page.html:174
+#: creatoradmin/templates/Product/add_product.html:195
+#: creatoradmin/templates/Product/product_edit.html:195
+#: creatoradmin/templates/Product/product_update.html:184
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:184
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:182
+#: creatoradmin/templates/Slider/add_slider.html:176
+#: creatoradmin/templates/Slider/edit_slider.html:177
+#: creatoradmin/templates/Slider/update_slider.html:178
+msgid "Status"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:185
+#: creatoradmin/templates/Aboutus/about_update.html:170
+#: creatoradmin/templates/Aboutus/add_about.html:184
+#: creatoradmin/templates/Blog/add_blog.html:184
+#: creatoradmin/templates/Blog/blog_edit.html:185
+#: creatoradmin/templates/Blog/blog_update.html:170
+#: creatoradmin/templates/Category/add-category.html:186
+#: creatoradmin/templates/Category/category_update.html:175
+#: creatoradmin/templates/Informations/add_informatsion.html:234
+#: creatoradmin/templates/Informations/info_edit.html:233
+#: creatoradmin/templates/Informations/info_update.html:224
+#: creatoradmin/templates/Product/add_product.html:203
+#: creatoradmin/templates/Product/product_edit.html:203
+#: creatoradmin/templates/Product/product_update.html:189
+#: creatoradmin/templates/Slider/add_slider.html:184
+#: creatoradmin/templates/Slider/edit_slider.html:185
+#: creatoradmin/templates/Slider/update_slider.html:163
+msgid "Description EN"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:190
+#: creatoradmin/templates/Aboutus/about_update.html:176
+#: creatoradmin/templates/Aboutus/add_about.html:189
+#: creatoradmin/templates/Blog/add_blog.html:189
+#: creatoradmin/templates/Blog/blog_edit.html:190
+#: creatoradmin/templates/Blog/blog_update.html:176
+#: creatoradmin/templates/Category/add-category.html:191
+#: creatoradmin/templates/Category/category_update.html:181
+#: creatoradmin/templates/Informations/add_informatsion.html:239
+#: creatoradmin/templates/Informations/info_edit.html:238
+#: creatoradmin/templates/Informations/info_update.html:229
+#: creatoradmin/templates/Product/add_product.html:208
+#: creatoradmin/templates/Product/product_edit.html:208
+#: creatoradmin/templates/Product/product_update.html:194
+#: creatoradmin/templates/Slider/add_slider.html:189
+#: creatoradmin/templates/Slider/edit_slider.html:190
+#: creatoradmin/templates/Slider/update_slider.html:168
+msgid "Description RU"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:195
+#: creatoradmin/templates/Aboutus/about_update.html:181
+#: creatoradmin/templates/Aboutus/add_about.html:194
+#: creatoradmin/templates/Blog/add_blog.html:194
+#: creatoradmin/templates/Blog/blog_edit.html:195
+#: creatoradmin/templates/Blog/blog_update.html:181
+#: creatoradmin/templates/Category/add-category.html:196
+#: creatoradmin/templates/Category/category_update.html:186
+#: creatoradmin/templates/Informations/add_informatsion.html:244
+#: creatoradmin/templates/Informations/info_edit.html:243
+#: creatoradmin/templates/Informations/info_update.html:234
+#: creatoradmin/templates/Product/add_product.html:213
+#: creatoradmin/templates/Product/product_edit.html:213
+#: creatoradmin/templates/Product/product_update.html:199
+#: creatoradmin/templates/Slider/add_slider.html:194
+#: creatoradmin/templates/Slider/edit_slider.html:195
+#: creatoradmin/templates/Slider/update_slider.html:173
+msgid "Description UZ"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_edit.html:198
+#: creatoradmin/templates/Aboutus/add_about.html:197
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:186
+#: creatoradmin/templates/Authenticate/user_password.html:163
+#: creatoradmin/templates/Authenticate/user_update.html:197
+#: creatoradmin/templates/Blog/add_blog.html:197
+#: creatoradmin/templates/Blog/blog_edit.html:198
+#: creatoradmin/templates/Category/add-category.html:199
+#: creatoradmin/templates/Category/category_edit.html:201
+#: creatoradmin/templates/Clients/user_password_client.html:160
+#: creatoradmin/templates/Clients/user_update_client.html:195
+#: creatoradmin/templates/Details/add_details.html:178
+#: creatoradmin/templates/Details/detail_edit.html:178
+#: creatoradmin/templates/Faq/add_faq.html:189
+#: creatoradmin/templates/Faq/faq_edit.html:189
+#: creatoradmin/templates/Informations/add_informatsion.html:255
+#: creatoradmin/templates/Informations/info_edit.html:254
+#: creatoradmin/templates/Product/add_product.html:216
+#: creatoradmin/templates/Product/product_edit.html:216
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:190
+#: creatoradmin/templates/Slider/add_slider.html:197
+#: creatoradmin/templates/Slider/edit_slider.html:198
+msgid "Submit"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_update.html:134
+#: creatoradmin/templates/Add_Creator/get_users.html:134
+#: creatoradmin/templates/Blog/blog_update.html:134
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:134
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:134
+#: creatoradmin/templates/Contact/contact_get.html:134
+#: creatoradmin/templates/Informations/info_update.html:134
+#: creatoradmin/templates/Newslatter/newslatter_get.html:134
+#: creatoradmin/templates/Orders/orders_page.html:139
+#: creatoradmin/templates/Slider/update_slider.html:134
+msgid "All clean"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_update.html:140
+msgid "About"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_update.html:185
+#: creatoradmin/templates/Add_Creator/get_users.html:172
+#: creatoradmin/templates/Blog/blog_update.html:185
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:186
+#: creatoradmin/templates/Category/category_update.html:190
+#: creatoradmin/templates/Contact/contact_get.html:190
+#: creatoradmin/templates/Details/details_update.html:167
+#: creatoradmin/templates/Faq/faq_update.html:192
+#: creatoradmin/templates/Informations/info_update.html:243
+#: creatoradmin/templates/Product/product_update.html:203
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:196
+#: creatoradmin/templates/Slider/update_slider.html:188
+msgid "Edit"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/about_update.html:186
+#: creatoradmin/templates/Add_Creator/get_users.html:173
+#: creatoradmin/templates/Blog/blog_update.html:186
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:187
+#: creatoradmin/templates/Category/category_update.html:191
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:190
+#: creatoradmin/templates/Contact/contact_get.html:191
+#: creatoradmin/templates/Details/details_update.html:168
+#: creatoradmin/templates/Faq/faq_update.html:193
+#: creatoradmin/templates/Informations/info_update.html:244
+#: creatoradmin/templates/Newslatter/newslatter_get.html:160
+#: creatoradmin/templates/Orders/order_detail.html:217
+#: creatoradmin/templates/Product/product_update.html:204
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:197
+#: creatoradmin/templates/Slider/update_slider.html:189
+msgid "Delete"
+msgstr ""
+
+#: creatoradmin/templates/Aboutus/add_about.html:139
+msgid "About us"
+msgstr ""
+
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:139
+#: creatoradmin/templates/Navbar/navbar.html:193
+msgid "User Permission"
+msgstr ""
+
+#: creatoradmin/templates/Add_Creator/add_user_permission.html:146
+msgid "User"
+msgstr ""
+
+#: creatoradmin/templates/Add_Creator/get_users.html:140
+msgid "Clients"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/register_creator.html:31
+msgid "Username"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_password.html:139
+#: creatoradmin/templates/Clients/user_password_client.html:136
+#: creatoradmin/templates/Navbar/navbar.html:216
+#: creatoradmin/templates/Navbar/navbar_clinet.html:52
+msgid "Change Password"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_password.html:147
+#: creatoradmin/templates/Clients/user_password_client.html:144
+msgid "Old Password"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_password.html:152
+#: creatoradmin/templates/Clients/user_password_client.html:149
+msgid "New Password 1"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_password.html:157
+#: creatoradmin/templates/Clients/user_password_client.html:154
+msgid "New Password 2"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:139
+#: creatoradmin/templates/Navbar/navbar.html:210
+msgid "Update Admin"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:147
+#: creatoradmin/templates/Clients/user_update_client.html:145
+msgid "User Name"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:152
+#: creatoradmin/templates/Clients/client.html:137
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:149
+#: creatoradmin/templates/Clients/user_update_client.html:150
+#: creatoradmin/templates/Creator/creator.html:308
+#: creatoradmin/templates/Orders/order_detail.html:150
+#: creatoradmin/templates/Orders/orders_page.html:157
+msgid "First Name"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:157
+#: creatoradmin/templates/Clients/user_update_client.html:155
+#: creatoradmin/templates/Orders/order_detail.html:151
+#: creatoradmin/templates/Orders/orders_page.html:158
+msgid "Lastname"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:163
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:161
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:162
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:166
+#: creatoradmin/templates/Clients/user_update_client.html:161
+#: creatoradmin/templates/Contact/contact_edit.html:155
+#: creatoradmin/templates/Contact/contact_get.html:156
+#: creatoradmin/templates/Informations/add_informatsion.html:192
+#: creatoradmin/templates/Informations/info_edit.html:192
+#: creatoradmin/templates/Informations/info_update.html:194
+#: creatoradmin/templates/Newslatter/newslatter_get.html:150
+#: creatoradmin/templates/Orders/order_detail.html:153
+#: creatoradmin/templates/Orders/orders_page.html:160
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:157
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:162
+msgid "Email"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:168
+#: creatoradmin/templates/Clients/client.html:140
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:161
+#: creatoradmin/templates/Clients/user_update_client.html:166
+#: creatoradmin/templates/Contact/contact_edit.html:161
+#: creatoradmin/templates/Contact/contact_get.html:162
+#: creatoradmin/templates/Creator/creator.html:311
+#: creatoradmin/templates/Informations/add_informatsion.html:187
+#: creatoradmin/templates/Informations/info_edit.html:187
+#: creatoradmin/templates/Informations/info_update.html:189
+#: creatoradmin/templates/Orders/order_detail.html:152
+#: creatoradmin/templates/Orders/orders_page.html:159
+msgid "Phone"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:172
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:171
+#: creatoradmin/templates/Clients/user_update_client.html:170
+#: creatoradmin/templates/Orders/order_detail.html:156
+#: creatoradmin/templates/Orders/orders_page.html:163
+msgid "Address"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:177
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:176
+#: creatoradmin/templates/Clients/user_update_client.html:175
+#: creatoradmin/templates/Informations/add_informatsion.html:167
+#: creatoradmin/templates/Informations/info_edit.html:167
+#: creatoradmin/templates/Informations/info_update.html:169
+#: creatoradmin/templates/Orders/order_detail.html:155
+#: creatoradmin/templates/Orders/orders_page.html:162
+msgid "City"
+msgstr ""
+
+#: creatoradmin/templates/Authenticate/user_update.html:182
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:181
+#: creatoradmin/templates/Clients/user_update_client.html:180
+#: creatoradmin/templates/Informations/add_informatsion.html:162
+#: creatoradmin/templates/Informations/info_edit.html:162
+#: creatoradmin/templates/Informations/info_update.html:164
+#: creatoradmin/templates/Orders/order_detail.html:154
+#: creatoradmin/templates/Orders/orders_page.html:161
+msgid "Country"
+msgstr ""
+
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:140
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:140
+#: creatoradmin/templates/Navbar/navbar.html:171
+msgid "Comment Blog"
+msgstr ""
+
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:155
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:156
+#: creatoradmin/templates/Contact/contact_edit.html:149
+#: creatoradmin/templates/Contact/contact_get.html:150
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:152
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:156
+msgid "Name"
+msgstr ""
+
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:166
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:167
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:169
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:172
+msgid "Comment"
+msgstr ""
+
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:178
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:177
+#: creatoradmin/templates/Contact/contact_get.html:182
+#: creatoradmin/templates/Newslatter/newslatter_get.html:156
+msgid "ip"
+msgstr ""
+
+#: creatoradmin/templates/Blog_Comment/comment_blog_edit.html:183
+#: creatoradmin/templates/Blog_Comment/comment_blog_get.html:182
+#: creatoradmin/templates/Clients/user_order_product_client.html:178
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:186
+#: creatoradmin/templates/Contact/contact_get.html:187
+#: creatoradmin/templates/Creator/creator.html:203
+#: creatoradmin/templates/Orders/order_detail.html:166
+#: creatoradmin/templates/Orders/orders_page.html:173
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:174
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:192
+#: creatoradmin/templates/Product_gallery/gallery_id.html:168
+msgid "Create at"
+msgstr ""
+
+#: creatoradmin/templates/Category/add-category.html:139
+#: creatoradmin/templates/Category/category_edit.html:139
+#: creatoradmin/templates/Category/category_update.html:140
+#: creatoradmin/templates/Creator/creator.html:147
+#: creatoradmin/templates/Creator/creator.html:150
+#: creatoradmin/templates/Creator/creator.html:185
+#: creatoradmin/templates/Creator/creator.html:194
+#: creatoradmin/templates/Creator/creator.html:262
+#: creatoradmin/templates/Product/add_product.html:146
+#: creatoradmin/templates/Product/product_edit.html:146
+#: creatoradmin/templates/Product/product_update.html:148
+#: creatoradmin/templates/Product_gallery/gallery_id.html:163
+msgid "Category"
+msgstr ""
+
+#: creatoradmin/templates/Category/add-category.html:173
+#: creatoradmin/templates/Category/category_edit.html:163
+#: creatoradmin/templates/Category/category_update.html:164
+#: creatoradmin/templates/Product/add_product.html:190
+#: creatoradmin/templates/Product/product_edit.html:190
+#: creatoradmin/templates/Product/product_update.html:179
+msgid "Slug"
+msgstr ""
+
+#: creatoradmin/templates/Clients/client.html:125
+#: creatoradmin/templates/Creator/creator.html:163
+#: creatoradmin/templates/Creator/creator.html:166
+#: creatoradmin/templates/Creator/creator.html:296
+#: creatoradmin/templates/Navbar/navbar.html:86
+msgid "Orders"
+msgstr ""
+
+#: creatoradmin/templates/Clients/client.html:127
+#: creatoradmin/templates/Creator/creator.html:187
+#: creatoradmin/templates/Creator/creator.html:243
+#: creatoradmin/templates/Creator/creator.html:298
+msgid "Count"
+msgstr ""
+
+#: creatoradmin/templates/Clients/client.html:134
+#: creatoradmin/templates/Creator/creator.html:305
+#: creatoradmin/templates/Orders/order_detail.html:141
+msgid "Code"
+msgstr ""
+
+#: creatoradmin/templates/Clients/client.html:143
+#: creatoradmin/templates/Creator/creator.html:314
+#: creatoradmin/templates/Orders/order_detail.html:190
+#: creatoradmin/templates/Orders/order_detail.html:212
+#: creatoradmin/templates/Orders/orders_page.html:185
+#: creatoradmin/templates/Orders/orders_page.html:207
+msgid "Total"
+msgstr ""
+
+#: creatoradmin/templates/Clients/client.html:150
+#: creatoradmin/templates/Creator/creator.html:321
+#: creatoradmin/templates/Details/add_details.html:140
+#: creatoradmin/templates/Details/detail_edit.html:140
+#: creatoradmin/templates/Details/details_update.html:140
+msgid "Details"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:132
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:137
+msgid "Orders Product"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:141
+msgid "Product Name"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:150
+msgid "Product collar"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:156
+#: creatoradmin/templates/Details/add_details.html:160
+#: creatoradmin/templates/Details/detail_edit.html:160
+#: creatoradmin/templates/Details/details_update.html:153
+#: creatoradmin/templates/Orders/order_detail.html:191
+#: creatoradmin/templates/Orders/orders_page.html:186
+msgid "Size"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:161
+msgid "Product Price"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:167
+msgid "Quantity"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:173
+msgid "Total Price"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_client.html:183
+msgid "Enter"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:144
+msgid "Order code"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_order_product_detail_client.html:155
+msgid "Last Name"
+msgstr ""
+
+#: creatoradmin/templates/Clients/user_update_client.html:137
+#: creatoradmin/templates/Navbar/navbar_clinet.html:46
+msgid "Update Client"
+msgstr ""
+
+#: creatoradmin/templates/Contact/contact_edit.html:140
+#: creatoradmin/templates/Contact/contact_get.html:140
+#: creatoradmin/templates/Creator/creator.html:171
+#: creatoradmin/templates/Creator/creator.html:174
+#: creatoradmin/templates/Navbar/navbar.html:163
+msgid "Contact"
+msgstr ""
+
+#: creatoradmin/templates/Contact/contact_edit.html:166
+#: creatoradmin/templates/Contact/contact_get.html:167
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:163
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:167
+msgid "Subject"
+msgstr ""
+
+#: creatoradmin/templates/Contact/contact_edit.html:171
+#: creatoradmin/templates/Contact/contact_edit.html:183
+#: creatoradmin/templates/Contact/contact_edit.html:188
+#: creatoradmin/templates/Contact/contact_get.html:172
+msgid "Message"
+msgstr ""
+
+#: creatoradmin/templates/Creator/creator.html:139
+msgid "New users"
+msgstr ""
+
+#: creatoradmin/templates/Creator/creator.html:142
+msgid "new users"
+msgstr ""
+
+#: creatoradmin/templates/Creator/creator.html:155
+#: creatoradmin/templates/Creator/creator.html:158
+#: creatoradmin/templates/Creator/creator.html:241
+#: creatoradmin/templates/Creator/creator.html:250
+#: creatoradmin/templates/Details/add_details.html:147
+#: creatoradmin/templates/Details/detail_edit.html:147
+#: creatoradmin/templates/Details/details_update.html:148
+#: creatoradmin/templates/Orders/order_detail.html:187
+#: creatoradmin/templates/Orders/orders_page.html:182
+#: creatoradmin/templates/Product/add_product.html:139
+#: creatoradmin/templates/Product/product_edit.html:139
+#: creatoradmin/templates/Product/product_update.html:140
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:147
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:150
+#: creatoradmin/templates/Product_gallery/gallery_id.html:148
+msgid "Product"
+msgstr ""
+
+#: creatoradmin/templates/Creator/creator.html:197
+#: creatoradmin/templates/Creator/creator.html:253
+msgid "Title"
+msgstr ""
+
+#: creatoradmin/templates/Creator/creator.html:206
+msgid "Update at"
+msgstr ""
+
+#: creatoradmin/templates/Creator/creator.html:256
+#: creatoradmin/templates/Product_gallery/gallery_id.html:158
+msgid "Old price"
+msgstr ""
+
+#: creatoradmin/templates/Creator/creator.html:259
+#: creatoradmin/templates/Product_gallery/gallery_id.html:153
+msgid "Sell price"
+msgstr ""
+
+#: creatoradmin/templates/Details/add_details.html:155
+#: creatoradmin/templates/Details/detail_edit.html:155
+msgid "Collor"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:139
+#: creatoradmin/templates/Faq/faq_edit.html:139
+#: creatoradmin/templates/Faq/faq_update.html:140
+msgid "FAQ"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:146
+#: creatoradmin/templates/Faq/faq_edit.html:146
+#: creatoradmin/templates/Faq/faq_update.html:150
+msgid "Ordernumber"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:152
+#: creatoradmin/templates/Faq/faq_edit.html:152
+#: creatoradmin/templates/Faq/faq_update.html:156
+msgid "Question EN"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:157
+#: creatoradmin/templates/Faq/faq_edit.html:157
+#: creatoradmin/templates/Faq/faq_update.html:161
+msgid "Question RU"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:162
+#: creatoradmin/templates/Faq/faq_edit.html:162
+#: creatoradmin/templates/Faq/faq_update.html:166
+msgid "Question UZ"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:176
+#: creatoradmin/templates/Faq/faq_edit.html:176
+#: creatoradmin/templates/Faq/faq_update.html:177
+msgid "Answer EN"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:181
+#: creatoradmin/templates/Faq/faq_edit.html:181
+#: creatoradmin/templates/Faq/faq_update.html:183
+msgid "Answer RU"
+msgstr ""
+
+#: creatoradmin/templates/Faq/add_faq.html:186
+#: creatoradmin/templates/Faq/faq_edit.html:186
+#: creatoradmin/templates/Faq/faq_update.html:188
+msgid "Answer UZ"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:139
+#: creatoradmin/templates/Informations/info_edit.html:139
+#: creatoradmin/templates/Informations/info_update.html:140
+msgid "Informatsion"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:172
+#: creatoradmin/templates/Informations/info_edit.html:172
+#: creatoradmin/templates/Informations/info_update.html:174
+msgid "Address EN"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:177
+#: creatoradmin/templates/Informations/info_edit.html:177
+#: creatoradmin/templates/Informations/info_update.html:179
+msgid "Address RU"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:182
+#: creatoradmin/templates/Informations/info_edit.html:182
+#: creatoradmin/templates/Informations/info_update.html:184
+msgid "Address UZ"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:197
+#: creatoradmin/templates/Informations/info_edit.html:197
+#: creatoradmin/templates/Informations/info_update.html:199
+msgid "Telegram"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:202
+#: creatoradmin/templates/Informations/info_edit.html:202
+#: creatoradmin/templates/Informations/info_update.html:204
+msgid "Instagram"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:207
+#: creatoradmin/templates/Informations/info_edit.html:207
+#: creatoradmin/templates/Informations/info_update.html:209
+msgid "Facebook"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:212
+#: creatoradmin/templates/Informations/info_edit.html:212
+#: creatoradmin/templates/Informations/info_update.html:214
+msgid "Twitter"
+msgstr ""
+
+#: creatoradmin/templates/Informations/add_informatsion.html:228
+#: creatoradmin/templates/Informations/info_edit.html:228
+#: creatoradmin/templates/Informations/info_update.html:219
+msgid "Location"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:23
+#: creatoradmin/templates/Navbar/navbar_clinet.html:31
+msgid "Dashboard"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:29
+msgid "Add Info"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:36
+msgid "Update Info"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:43
+msgid "Add Category"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:50
+msgid "Update Category"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:57
+msgid "Add Product"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:64
+msgid "Update Product"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:71
+msgid "Add Slider"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:78
+msgid "Slider Update"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:93
+#: creatoradmin/templates/Product_gallery/gallery_id.html:140
+msgid "Product Details"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:100
+msgid "Details update"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:107
+msgid "Add Blog"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:115
+msgid "Blog Update"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:123
+msgid "Add Aboutus"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:131
+msgid "About Update"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:138
+msgid "Add Faq"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:146
+msgid "Faq Update"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:155
+#: creatoradmin/templates/Newslatter/newslatter_get.html:140
+msgid "Newslatter"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:179
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:139
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:140
+msgid "Comment Product"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:186
+msgid "Product Gallery"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar.html:201
+msgid "Create Creator"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar_clinet.html:23
+msgid "Shop"
+msgstr ""
+
+#: creatoradmin/templates/Navbar/navbar_clinet.html:39
+msgid "Product Orders"
+msgstr ""
+
+#: creatoradmin/templates/Orders/order_detail.html:148
+msgid "Order Address"
+msgstr ""
+
+#: creatoradmin/templates/Orders/order_detail.html:157
+#: creatoradmin/templates/Orders/orders_page.html:164
+msgid "Feedback"
+msgstr ""
+
+#: creatoradmin/templates/Orders/order_detail.html:188
+#: creatoradmin/templates/Orders/orders_page.html:183
+msgid "Native Price"
+msgstr ""
+
+#: creatoradmin/templates/Orders/order_detail.html:189
+#: creatoradmin/templates/Orders/orders_page.html:184
+msgid "QTY"
+msgstr ""
+
+#: creatoradmin/templates/Orders/order_detail.html:192
+#: creatoradmin/templates/Orders/orders_page.html:187
+msgid "Collar"
+msgstr ""
+
+#: creatoradmin/templates/Orders/order_detail.html:211
+#: creatoradmin/templates/Orders/orders_page.html:206
+msgid "Subtotal amount"
+msgstr ""
+
+#: creatoradmin/templates/Orders/orders_page.html:211
+msgid "Detail"
+msgstr ""
+
+#: creatoradmin/templates/Product/add_product.html:168
+#: creatoradmin/templates/Product/product_edit.html:168
+#: creatoradmin/templates/Product/product_update.html:168
+msgid "Old Price"
+msgstr ""
+
+#: creatoradmin/templates/Product/add_product.html:173
+#: creatoradmin/templates/Product/product_edit.html:173
+#: creatoradmin/templates/Product/product_update.html:173
+msgid "Sell Price"
+msgstr ""
+
+#: creatoradmin/templates/Product_Comment/comment_product_edit.html:179
+msgid "ip address"
+msgstr ""
+
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:177
+msgid "Rate"
+msgstr ""
+
+#: creatoradmin/templates/Product_Comment/comment_product_get.html:187
+msgid "Ip"
+msgstr ""
+
+#: creatoradmin/templates/Product_gallery/gallery.html:136
+msgid "Gallery"
+msgstr ""
+
+#: creatoradmin/templates/Product_gallery/gallery.html:145
+msgid "light Gallery"
+msgstr ""
+
+#: creatoradmin/templates/Product_gallery/gallery.html:147
+msgid "Click on any image to open in lightbox gallery"
+msgstr ""
+
+#: creatoradmin/templates/Searched/searched.html:136
+#: creatoradmin/templates/Searched/searched.html:145
+msgid "Searched"
+msgstr ""
+
+#: creatoradmin/templates/Searched/searched.html:147
+msgid "Click on any image to open in product"
+msgstr ""
+
+#: creatoradmin/templates/Slider/add_slider.html:139
+#: creatoradmin/templates/Slider/edit_slider.html:139
+#: creatoradmin/templates/Slider/update_slider.html:140
+msgid "Slider"
+msgstr ""

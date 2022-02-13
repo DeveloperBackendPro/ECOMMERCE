@@ -1,0 +1,62 @@
+{% load static %}
+{% load i18n %}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img src="{{ client.image.url }}" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  {{ client.user.username }}
+                </p>
+                <p class="designation">
+                  Super Admin
+                </p>
+              </div>
+            </div>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'index'%}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">{% trans 'Shop'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'client'%}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">{% trans 'Dashboard'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_orders_product'%}">
+                <i class="fas fa-pen-square menu-icon"></i>
+                <span class="menu-title">{% trans 'Product Orders'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_update_client'%}">
+                <i class="fas fa-pen-square menu-icon"></i>
+                <span class="menu-title">{% trans 'Update Client'%}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_password_client'%}">
+                <i class="fas fa-exchange-alt menu-icon"></i>
+                <span class="menu-title">{% trans 'Change Password'%}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout_form'%}">
+                <i class="fas fa-sign-out-alt menu-icon"></i>
+              <span class="menu-title">{% trans 'Logout'%}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>

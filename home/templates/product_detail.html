@@ -1,0 +1,613 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Short Description &ndash; Belle Multipurpose Bootstrap 4 Template</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+</head>
+<body class="template-product belle">
+
+
+    {% include 'header.html' %}
+
+    <div id="page-content">
+        <div id="MainContent" class="main-content" role="main">
+            <div class="bredcrumbWrap">
+                <div class="container breadcrumbs">
+                    <a href="index.html" title="Back to the home page"></a><span
+                        aria-hidden="true">›</span><span></span>
+                </div>
+            </div>
+            <div id="ProductSection-product-template" class="product-template__container prstyle1 container">
+                <!--product-single-->
+                <div class="product-single">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="product-details-img">
+                                <div class="product-thumb">
+                                    <div id="gallery" class="product-dec-slider-2 product-tab-left">
+                                        {% for rs in images %}
+                                            <a data-image="{{ rs.image.url }}"
+                                               data-zoom-image="{{ rs.image.url }}"
+                                               class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true"
+                                               tabindex="-1">
+                                                <img class="blur-up lazyload"
+                                                     src="{{ rs.image.url }}" alt=""/>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="zoompro-wrap product-zoom-right pl-20">
+                                    <div class="zoompro-span">
+                                        <img class="zoompro blur-up lazyload" data-zoom-image="" alt=""
+                                             src="{{ product.image.url }}"/>
+                                    </div>
+                                    <div class="product-labels"><span class="lbl on-sale">{% trans 'Sale'%}</span><span
+                                            class="lbl pr-label1">{% trans 'new'%}</span></div>
+
+                                </div>
+                                <div class="lightboximages">
+                                    <a href="{% static 'assets/images/product-detail-page/cape-dress-1.jpg' %}"
+                                       data-size="1462x2048"></a>
+                                    <a href="{% static 'assets/images/product-detail-page/cape-dress-2.jpg' %}"
+                                       data-size="1462x2048"></a>
+                                    <a href="{% static 'assets/images/product-detail-page/cape-dress-3.jpg' %}"
+                                       data-size="1462x2048"></a>
+                                    <a href="{% static 'assets/images/product-detail-page/cape-dress-4.jpg' %}"
+                                       data-size="1462x2048"></a>
+                                    <a href="{% static 'assets/images/product-detail-page/cape-dress-5.jpg' %}"
+                                       data-size="1462x2048"></a>
+                                    <a href="{% static 'assets/images/product-detail-page/cape-dress-6.jpg' %}"
+                                       data-size="1462x2048"></a>
+                                    <a href="{% static 'assets/images/product-detail-page/cape-dress-7.jpg' %}"
+                                       data-size="731x1024"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="product-single__meta">
+                                <h1 class="product-single__title">{{ product.title }}</h1>
+                                <div class="product-nav clearfix">
+                                  </div>
+                                <div class="prInfoRow">
+                                    <div class="product-review"><a class="reviewLink" href="#tab2">
+                                            <i class='font-13 fa fa-star{% if product.avaregereview < 1 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if product.avaregereview < 2 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if product.avaregereview < 3 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if product.avaregereview < 4 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if product.avaregereview < 5 %}-o empty{% endif%}'></i>
+                                        <span class="spr-badge-caption">{% trans 'comments'%} : {{ product.countreview }}</span></a></div>
+                                </div>
+                                <p class="product-single__price product-single__price-product-template">
+                                    <span class="visually-hidden">Regular price</span>
+                                    <s id="ComparePrice-product-template"><span class="money">{{ product.old_price }} sum</span></s>
+                                    <span class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
+                                                <span id="ProductPrice-product-template"><span
+                                                        class="money">{{ product.sell_price }} sum</span></span>
+                                            </span>
+                                </p>
+                            </div>
+                            <div class="product-single__description rte">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            {% if user.id is not None %}
+                            <form method="post" action="{% url 'addtoshopcart' pk=product.pk %}"
+                                  class="product-form product-form-product-template hidedropdown">
+                                {% csrf_token %}
+                                <div class="swatch clearfix swatch-0 option1" data-option-index="0">
+                                    <div class="product-form__item">
+                                        {% for rs in images %}
+                                            <div data-value="{{ rs.collor }}"
+                                                 class="swatch-element color black available">
+                                                <input class="swatchInput" id="swatch-{{ rs.collor }}" type="radio"
+                                                       name="collar" value="{{ rs.collor }}"><label
+                                                    class="swatchLbl color small" for="swatch-{{ rs.collor }}"
+                                                    style="background-color:{{ rs.collor }};"
+                                                    title="{{ rs.title }}"></label>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                                <div class="swatch clearfix swatch-1 option2" data-option-index="1">
+                                    <div class="product-form__item">
+                                        {% for rs in images %}
+                                            <div data-value="{{ rs.size }}" class="swatch-element xs available">
+                                                <input class="swatchInput" id="swatch-{{ rs.size }}" type="radio"
+                                                       name="size" value="{{ rs.size }}">
+                                                <label class="swatchLbl medium rectangle" for="swatch-{{ rs.size }}"
+                                                       title="{{ rs.size }}">{{ rs.size }}</label>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                                <!-- Product Action -->
+                                <div class="product-action clearfix">
+                                    <div class="product-form__item--quantity">
+                                        <div class="wrapQtyBtn">
+                                            <div class="quantity">
+                                                <input class="input" name="quantity" type="number" value="1" min="1" max="{{ product.amount }}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-form__item--submit">
+                                        <a href="">
+                                            <button type="submit" name="add" class="btn product-form__cart-submit">
+                                                <span>{% trans 'Add to cart'%}</span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="shopify-payment-button" data-shopify="payment-button">
+                                    </div>
+                                </div>
+                                <!-- End Product Action -->
+                            </form>
+                        {% else %}
+                        {% endif %}
+                            <div class="display-table shareRow">
+                                <div class="display-table-cell medium-up--one-third">
+                                    <div class="wishlist-btn">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <p id="freeShipMsg" class="freeShipMsg" data-price="199">
+                                <i class="fa fa-truck" aria-hidden="true"></i>
+                                {% trans 'GETTING CLOSER! ONLY'%} <b class="freeShip">
+                            </b> {% trans 'AWAY FROM FREE SHIPPING!'%}</p>
+                            <p class="shippingMsg">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                {% trans 'ESTIMATED DELIVERY BETWEEN Wed. May 1 and Tue. May 7.'%}</p>
+                            <div class="userViewMsg" data-user="20" data-time="11000"><i class="fa fa-users" aria-hidden="true"></i>
+                                <strong class="uersView">14</strong> {% trans "PEOPLE ARE LOOKING FOR THIS PRODUCT"%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End-product-single-->
+                <!--Product Fearure-->
+                <div class="prFeatures">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 feature">
+                            <img src="{% static 'assets/images/credit-card.png' %}" alt="Safe Payment"
+                                 title="Safe Payment"/>
+                            <div class="details"><h3>{% trans 'Safe Payment'%}</h3>{% trans "Pay with the world's most payment methods."%}</div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 feature">
+                            <img src="{% static 'assets/images/shield.png' %}" alt="Confidence" title="Confidence"/>
+                            <div class="details"><h3>{% trans 'Confidence'%}</h3>{% trans "Protection covers your purchase and personal data."%}
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 feature">
+                            <img src="{% static 'assets/images/worldwide.png' %}" alt="Worldwide Delivery"
+                                 title="Worldwide Delivery"/>
+                            <div class="details"><h3>{% trans "Worldwide Delivery"%}</h3>
+                                {% trans "FREE &amp; fast shipping to over 200+ countries &amp; regions."%}
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 feature">
+                            <img src="{% static 'assets/images/phone-call.png' %}" alt="Hotline" title="Hotline"/>
+                            <div class="details"><h3>{% trans "Hotline"%}</h3>{% trans "Talk to help line for your question on 4141 456 789, 4125 666 888"%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Product Fearure-->
+                <!--Product Tabs-->
+                <div class="tabs-listing">
+                    <ul class="product-tabs">
+                        <li rel="tab1"><a class="tablink">{% trans 'Product Details'%}</a></li>
+                        <li rel="tab2"><a class="tablink">{% trans 'Product Reviews'%}</a></li>
+                        <li rel="tab3"><a class="tablink">{% trans 'Size Chart'%}</a></li>
+                    </ul>
+                    <div class="tab-container">
+                        <div id="tab1" class="tab-content">
+                            <div class="product-description rte">
+                                <p>{{ product.description }}</p>
+                            </div>
+                        </div>
+
+                        <div id="tab2" class="tab-content">
+                            <div id="shopify-product-reviews">
+                                <div class="spr-container">
+                                    <div class="spr-header clearfix">
+                                        <div class="spr-summary">
+                                            <span class="product-review">
+                                                    <i class='font-13 fa fa-star{% if product.avaregereview < 1 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if product.avaregereview < 2 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if product.avaregereview < 3 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if product.avaregereview < 4 %}-o empty{% endif%}'></i>
+                                                    <i class='font-13 fa fa-star{% if product.avaregereview < 5 %}-o empty{% endif%}'></i>
+                                                <span class="spr-summary-actions-togglereviews"> ({{ product.countreview }})</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="spr-content">
+                                        <div class="spr-form clearfix">
+                                            <form method="post" action="{% url 'addcomment' product.id %}" id="new-review-form" class="new-review-form">
+                                                {% csrf_token %}
+                                                <fieldset class="spr-form-contact">
+                                                    <div class="spr-form-contact-name">
+                                                        <label class="spr-form-label" for="review_author_10508262282">{% trans 'Name'%}</label>
+                                                        <input class="spr-form-input spr-form-input-text " id="review_author_10508262282" type="text" name="name" value="" placeholder="Enter your name">
+                                                    </div>
+                                                    <div class="spr-form-contact-email">
+                                                        <label class="spr-form-label" for="review_email_10508262282">{% trans 'Email'%}</label>
+                                                        <input class="spr-form-input spr-form-input-email " id="review_email_10508262282" type="email"
+                                                               name="email" value=""
+                                                               placeholder="john.smith@example.com">
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset class="spr-form-review">
+                                                    <div class="spr-form-review-rating">
+                                                        <label class="spr-form-label">{% trans 'Rating'%}</label>
+                                                        <div class="spr-form-input spr-starrating">
+                                                            <div class="product-review">
+                                                                 <input type="radio" id="star1" name="rate" value="1"/><label for="star1"></label>
+                                                                 <input type="radio" id="star2" name="rate" value="2"/><label for="star2"></label>
+                                                                 <input type="radio" id="star3" name="rate" value="3"/><label for="star3"></label>
+                                                                 <input type="radio" id="star4" name="rate" value="4"/><label for="star4"></label>
+                                                                 <input type="radio" id="star5" name="rate" value="5"/><label for="star5"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="spr-form-review-title">
+                                                        <label class="spr-form-label" for="review_title_10508262282">{% trans 'Subject'%}</label>
+                                                        <input class="spr-form-input spr-form-input-text "
+                                                               id="review_title_10508262282" type="text"
+                                                               name="subject" value=""
+                                                               placeholder="Give your review a title">
+                                                    </div>
+
+                                                    <div class="spr-form-review-body">
+                                                        <label class="spr-form-label" for="review_body_10508262282">{% trans "Body of Review"%}<span
+                                                                    class="spr-form-review-body-charactersremaining">(1500)</span></label>
+                                                        <div class="spr-form-input">
+                                                            <textarea class="spr-form-input spr-form-input-textarea "
+                                                                      id="review_body_10508262282"
+                                                                      data-product-id="10508262282" name="comment"
+                                                                      rows="10"
+                                                                      placeholder="Write your comments here"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset class="spr-form-actions">
+                                                      {% if user.id is not None %}
+                                                    <input type="submit" class="spr-button spr-button-primary button button-primary btn btn-primary" value="Submit Review">
+                                                    {% else %}
+                                                        {% trans 'You must be logged in post a review'%}
+                                                    {% endif %}
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="spr-reviews">
+                                             {% for rs in comments %}
+                                            <div class="spr-review">
+                                                <div class="spr-review-header">
+                                                    <span class="product-review spr-starratings spr-review-header-starratings">
+                                                        <span class="reviewLink">
+                                                            <i class="fa fa-star{% if rs.rate < 1 %}-o empty{% endif %}"></i>
+                                                            <i class="fa fa-star{% if rs.rate < 2 %}-o empty{% endif %}"></i>
+                                                            <i class="fa fa-star{% if rs.rate < 3 %}-o empty{% endif %}"></i>
+                                                            <i class="fa fa-star{% if rs.rate < 4 %}-o empty{% endif %}"></i>
+                                                            <i class="fa fa-star{% if rs.rate < 5 %}-o empty{% endif %}"></i>
+                                                        </span>
+                                                    </span>
+                                                    <h3 class="spr-review-header-title">{{ rs.name }}</h3>
+                                                    <span class="spr-review-header-byline"><strong>{{ rs.create_at }}</strong></span>
+                                                </div>
+                                                <div class="spr-review-content">
+                                                    <p class="spr-review-content-body">{{ rs.comment }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab3" class="tab-content">
+                            <h3>WOMEN'S BODY SIZING CHART</h3>
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>XS</th>
+                                    <th>S</th>
+                                    <th>M</th>
+                                    <th>L</th>
+                                    <th>XL</th>
+                                </tr>
+                                <tr>
+                                    <td>Chest</td>
+                                    <td>31" - 33"</td>
+                                    <td>33" - 35"</td>
+                                    <td>35" - 37"</td>
+                                    <td>37" - 39"</td>
+                                    <td>39" - 42"</td>
+                                </tr>
+                                <tr>
+                                    <td>Waist</td>
+                                    <td>24" - 26"</td>
+                                    <td>26" - 28"</td>
+                                    <td>28" - 30"</td>
+                                    <td>30" - 32"</td>
+                                    <td>32" - 35"</td>
+                                </tr>
+                                <tr>
+                                    <td>Hip</td>
+                                    <td>34" - 36"</td>
+                                    <td>36" - 38"</td>
+                                    <td>38" - 40"</td>
+                                    <td>40" - 42"</td>
+                                    <td>42" - 44"</td>
+                                </tr>
+                                <tr>
+                                    <td>Regular inseam</td>
+                                    <td>30"</td>
+                                    <td>30½"</td>
+                                    <td>31"</td>
+                                    <td>31½"</td>
+                                    <td>32"</td>
+                                </tr>
+                                <tr>
+                                    <td>Long (Tall) Inseam</td>
+                                    <td>31½"</td>
+                                    <td>32"</td>
+                                    <td>32½"</td>
+                                    <td>33"</td>
+                                    <td>33½"</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <h3>MEN'S BODY SIZING CHART</h3>
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>XS</th>
+                                    <th>S</th>
+                                    <th>M</th>
+                                    <th>L</th>
+                                    <th>XL</th>
+                                    <th>XXL</th>
+                                </tr>
+                                <tr>
+                                    <td>Chest</td>
+                                    <td>33" - 36"</td>
+                                    <td>36" - 39"</td>
+                                    <td>39" - 41"</td>
+                                    <td>41" - 43"</td>
+                                    <td>43" - 46"</td>
+                                    <td>46" - 49"</td>
+                                </tr>
+                                <tr>
+                                    <td>Waist</td>
+                                    <td>27" - 30"</td>
+                                    <td>30" - 33"</td>
+                                    <td>33" - 35"</td>
+                                    <td>36" - 38"</td>
+                                    <td>38" - 42"</td>
+                                    <td>42" - 45"</td>
+                                </tr>
+                                <tr>
+                                    <td>Hip</td>
+                                    <td>33" - 36"</td>
+                                    <td>36" - 39"</td>
+                                    <td>39" - 41"</td>
+                                    <td>41" - 43"</td>
+                                    <td>43" - 46"</td>
+                                    <td>46" - 49"</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <img src="{% static 'assets/images/size.jpg' %}" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-product grid-products">
+                    <header class="section-header">
+                        <h2 class="section-header__title text-center h2"><span>{% trans 'Related Products'%}</span></h2>
+                        <p class="sub-heading">{% trans "You can stop autoplay, increase/decrease aniamtion speed and number ofgrid to show and products from store admin."%}</p>
+                    </header>
+                    <div class="productPageSlider">
+                        {% for rs in product_latest %}
+                            <div class="col-12 item">
+                                <div class="product-image">
+                                    <a href="{% url 'produc_details' rs.id rs.slug %}">
+                                        <img class=""
+                                             data-src="{{ rs.image.url }}"
+                                             src="{{ rs.image.url }}" alt="image"
+                                             title="product">
+                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
+                                            <span
+                                                    class="lbl pr-label1">{% trans 'new'%}</span></div>
+                                    </a>
+                                </div>
+                                <div class="product-details text-center">
+                                    <div class="product-name">
+                                        <a href="{% url 'produc_details' rs.id rs.slug %}">{{ rs.title }}</a>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="old-price">{{ rs.old_price }} sum</span>
+                                        <span class="price">{{ rs.sell_price }} sum</span>
+                                    </div>
+                                    <div class="product-review">
+                                        <i class='font-13 fa fa-star{% if rs.avaregereview < 1 %}-o empty{% endif%}'></i>
+                                        <i class='font-13 fa fa-star{% if rs.avaregereview < 2 %}-o empty{% endif%}'></i>
+                                        <i class='font-13 fa fa-star{% if rs.avaregereview < 3 %}-o empty{% endif%}'></i>
+                                        <i class='font-13 fa fa-star{% if rs.avaregereview < 4 %}-o empty{% endif%}'></i>
+                                        <i class='font-13 fa fa-star{% if rs.avaregereview < 5 %}-o empty{% endif%}'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="related-product grid-products">
+                    <header class="section-header">
+                        <h2 class="section-header__title text-center h2"><span>{% trans "Recently Viewed Product"%}</span></h2>
+                        <p class="sub-heading">{% trans "You can manage this section from store admin as describe in above section"%}</p>
+                    </header>
+                    <div class="productPageSlider">
+                        {% for rs in product_picked %}
+                            <div class="col-12 item">
+                                <div class="product-image">
+                                    <a href="{% url 'produc_details' rs.id rs.slug %}">
+                                        <img class=""
+                                             data-src="{{ rs.image.url }}"
+                                             src="{{ rs.image.url }}" alt="image"
+                                             title="product">
+                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
+                                            <span
+                                                    class="lbl pr-label1">new</span></div>
+                                    </a>
+                                </div>
+                                <div class="product-details text-center">
+                                    <div class="product-name">
+                                        <a href="{% url 'produc_details' rs.id rs.slug %}">{{ rs.title }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <div class="hide">
+        <div id="sizechart">
+            <h3>WOMEN'S BODY SIZING CHART</h3>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Size</th>
+                    <th>XS</th>
+                    <th>S</th>
+                    <th>M</th>
+                    <th>L</th>
+                    <th>XL</th>
+                </tr>
+                <tr>
+                    <td>Chest</td>
+                    <td>31" - 33"</td>
+                    <td>33" - 35"</td>
+                    <td>35" - 37"</td>
+                    <td>37" - 39"</td>
+                    <td>39" - 42"</td>
+                </tr>
+                <tr>
+                    <td>Waist</td>
+                    <td>24" - 26"</td>
+                    <td>26" - 28"</td>
+                    <td>28" - 30"</td>
+                    <td>30" - 32"</td>
+                    <td>32" - 35"</td>
+                </tr>
+                <tr>
+                    <td>Hip</td>
+                    <td>34" - 36"</td>
+                    <td>36" - 38"</td>
+                    <td>38" - 40"</td>
+                    <td>40" - 42"</td>
+                    <td>42" - 44"</td>
+                </tr>
+                <tr>
+                    <td>Regular inseam</td>
+                    <td>30"</td>
+                    <td>30½"</td>
+                    <td>31"</td>
+                    <td>31½"</td>
+                    <td>32"</td>
+                </tr>
+                <tr>
+                    <td>Long (Tall) Inseam</td>
+                    <td>31½"</td>
+                    <td>32"</td>
+                    <td>32½"</td>
+                    <td>33"</td>
+                    <td>33½"</td>
+                </tr>
+                </tbody>
+            </table>
+            <h3>MEN'S BODY SIZING CHART</h3>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Size</th>
+                    <th>XS</th>
+                    <th>S</th>
+                    <th>M</th>
+                    <th>L</th>
+                    <th>XL</th>
+                    <th>XXL</th>
+                </tr>
+                <tr>
+                    <td>Chest</td>
+                    <td>33" - 36"</td>
+                    <td>36" - 39"</td>
+                    <td>39" - 41"</td>
+                    <td>41" - 43"</td>
+                    <td>43" - 46"</td>
+                    <td>46" - 49"</td>
+                </tr>
+                <tr>
+                    <td>Waist</td>
+                    <td>27" - 30"</td>
+                    <td>30" - 33"</td>
+                    <td>33" - 35"</td>
+                    <td>36" - 38"</td>
+                    <td>38" - 42"</td>
+                    <td>42" - 45"</td>
+                </tr>
+                <tr>
+                    <td>Hip</td>
+                    <td>33" - 36"</td>
+                    <td>36" - 39"</td>
+                    <td>39" - 41"</td>
+                    <td>41" - 43"</td>
+                    <td>43" - 46"</td>
+                    <td>46" - 49"</td>
+                </tr>
+                </tbody>
+            </table>
+            <div style="padding-left: 30px;"><img src="{% static 'assets/images/size.jpg' %}" alt=""></div>
+        </div>
+    </div>
+    <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.cookie.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/lazysizes.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/photoswipe.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/photoswipe-ui-default.min.js' %}"></script>
+</body>
+</html>

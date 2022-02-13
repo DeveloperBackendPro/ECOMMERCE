@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-13 01:44+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+#: order/templates/checkout.html:40
+msgid "Returning customer?"
+msgstr "Адрес доставки товара"
+
+#: order/templates/checkout.html:48
+msgid "Your Product"
+msgstr "Ваш продукт"
+
+#: order/templates/checkout.html:61
+msgid "Billing details"
+msgstr "Платежные реквизиты"
+
+#: order/templates/checkout.html:64
+msgid "First Name"
+msgstr "Имя"
+
+#: order/templates/checkout.html:68
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: order/templates/checkout.html:74
+msgid "Email"
+msgstr "Email"
+
+#: order/templates/checkout.html:78
+msgid "Telephone"
+msgstr "телефон"
+
+#: order/templates/checkout.html:87
+msgid "Country"
+msgstr "Страна"
+
+#: order/templates/checkout.html:91
+msgid "City"
+msgstr "Город"
+
+#: order/templates/checkout.html:97
+msgid "Address"
+msgstr "Адрес"
+
+#: order/templates/checkout.html:106
+msgid "Order Notes"
+msgstr "Примечания к заказу"
+
+#: order/templates/checkout.html:122
+msgid "Your Order"
+msgstr "Ваши заказы"
+
+#: order/templates/checkout.html:128
+msgid "Product Name"
+msgstr "наименование товара"
+
+#: order/templates/checkout.html:129 order/templates/shopcart.html:47
+msgid "Price"
+msgstr "Цена"
+
+#: order/templates/checkout.html:130
+msgid "Qty"
+msgstr "штук"
+
+#: order/templates/checkout.html:131
+msgid "Amount"
+msgstr "Количество"
+
+#: order/templates/checkout.html:132 order/templates/shopcart.html:65
+msgid "Size"
+msgstr "Размер"
+
+#: order/templates/checkout.html:133
+msgid "collar"
+msgstr "Цветы"
+
+#: order/templates/checkout.html:151 order/templates/shopcart.html:49
+msgid "Total"
+msgstr "Всего"
+
+#: order/templates/shopcart.html:40
+msgid "Congratulations!"
+msgstr "Поздравляем!"
+
+#: order/templates/shopcart.html:40
+msgid "You've got free shipping !"
+msgstr "У вас бесплатная доставка!"
+
+#: order/templates/shopcart.html:46
+msgid "Product"
+msgstr "Продукт"
+
+#: order/templates/shopcart.html:48
+msgid "Quantity"
+msgstr "штук"
+
+#: order/templates/shopcart.html:65
+msgid "Collar"
+msgstr "Цветы"
+
+#: order/templates/shopcart.html:81
+msgid "Siz hali maxsulot qoshmagansz"
+msgstr "Вы еще не добавили товар"
+
+#: order/templates/shopcart.html:350
+msgid "Subtotal"
+msgstr "Промежуточный итог"
+
+#: order/templates/shopcart.html:356
+msgid "Grand Total"
+msgstr "Общий итог"
+
+#: order/templates/shopcart.html:363
+msgid "Checkout with Multiple Addresses"
+msgstr "Оформить заказ с несколькими адресами"

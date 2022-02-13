@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-13 01:44+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: home/templates/blog-detail.html:37 home/templates/blog.html:35
+#: home/templates/contact-us.html:32 home/templates/header.html:86
+#: home/templates/header.html:145
+msgid "Home"
+msgstr "Домой"
+
+#: home/templates/blog-detail.html:38
+msgid "News"
+msgstr ""
+
+#: home/templates/blog-detail.html:54 home/templates/product_detail.html:91
+msgid "comments"
+msgstr "Комментарии"
+
+#: home/templates/blog-detail.html:83
+msgid "Leave a comment"
+msgstr "Комментарии"
+
+#: home/templates/blog-detail.html:105
+msgid "Please note, comments must be approved before they are published"
+msgstr ""
+"Обратите внимание, что комментарии должны быть одобрены перед публикацией."
+
+#: home/templates/blog-detail.html:118 home/templates/blog.html:44
+#: home/templates/category_product.html:34 home/templates/header.html:88
+#: home/templates/header.html:93 home/templates/header.html:146
+msgid "Category"
+msgstr "Категория"
+
+#: home/templates/blog-detail.html:128
+msgid "Product"
+msgstr "информация о продукте"
+
+#: home/templates/blog-detail.html:154
+msgid "Trending Now"
+msgstr "Актуальные"
+
+#: home/templates/blog.html:54
+msgid "Products"
+msgstr "информация о продукте"
+
+#: home/templates/blog.html:77
+msgid "Recent Comments"
+msgstr "Комментарии"
+
+#: home/templates/blog.html:122
+msgid "Read more..."
+msgstr "Читать далее..."
+
+#: home/templates/category_product.html:44
+msgid "Popular Products"
+msgstr "Популярные продукты"
+
+#: home/templates/category_product.html:73
+msgid "Category Description"
+msgstr "Категория Описание"
+
+#: home/templates/category_product.html:78
+msgid "showing"
+msgstr "показывая"
+
+#: home/templates/footer.html:11
+msgid "sign up for"
+msgstr "Подпишись на"
+
+#: home/templates/footer.html:11
+msgid "newsletter"
+msgstr "Новостная рассылка"
+
+#: home/templates/footer.html:20
+msgid "Subscribe"
+msgstr "Подписаться"
+
+#: home/templates/header.html:46
+msgid "Worldwide Express Shipping"
+msgstr "Экспресс-доставка по всему миру"
+
+#: home/templates/header.html:51
+msgid "Login"
+msgstr "ВОЙТИ"
+
+#: home/templates/header.html:52
+msgid "Create Account"
+msgstr "Зарегистрироваться"
+
+#: home/templates/header.html:54
+msgid "My account"
+msgstr "Мой аккаунт"
+
+#: home/templates/header.html:103 home/templates/header.html:154
+msgid "Aboutus"
+msgstr "О нас"
+
+#: home/templates/header.html:105 home/templates/header.html:155
+msgid "Blog"
+msgstr "Блог"
+
+#: home/templates/header.html:108 home/templates/header.html:156
+msgid "FAQ's"
+msgstr "ЧЗВ"
+
+#: home/templates/header.html:110
+msgid "Contactus"
+msgstr "Контакт"
+
+#: home/templates/header.html:157
+msgid "Contact"
+msgstr "Контакт"
+
+#: home/templates/index.html:53
+msgid "New Arrivals"
+msgstr "Новые поступления"
+
+#: home/templates/index.html:54
+msgid "Browse the huge variety of our products"
+msgstr "Просмотрите огромное разнообразие нашей продукции"
+
+#: home/templates/index.html:152
+msgid "Featured collection"
+msgstr "Избранная коллекция"
+
+#: home/templates/index.html:153
+msgid "Our most popular products based on sales"
+msgstr "Наши самые популярные продукты на основе продаж"
+
+#: home/templates/index.html:167 home/templates/product_detail.html:57
+#: home/templates/product_detail.html:445
+msgid "new"
+msgstr "новый"
+
+#: home/templates/index.html:185
+msgid "Latest From our Blog"
+msgstr "Последнее из нашего блога"
+
+#: home/templates/index.html:200
+msgid "It's all about how you wear"
+msgstr "Все дело в том, как вы носите"
+
+#: home/templates/index.html:202
+msgid "May 02, 2017"
+msgstr "May 02, 2017"
+
+#: home/templates/index.html:204
+msgid ""
+"I must explain to you how all this mistaken idea of denouncing pleasure and "
+"praising pain was born and I will give you a complete account..."
+msgstr ""
+"Я должен объяснить вам, как родилась вся эта ошибочная идея осуждения "
+"удовольствия и восхваления боли, и я дам вам полный отчет..."
+
+#: home/templates/index.html:222
+msgid "27 Days of Spring Fashion Recap"
+msgstr "Итоги 27 дней весенней моды"
+
+#: home/templates/index.html:226
+msgid ""
+"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+"doloremque laudantium, totam rem aperiam, eaque ipsa quae ab..."
+msgstr ""
+"Но для того, чтобы вы могли понять, откуда всякое рожденное заблуждение есть "
+"удовольствие обвинять и восхвалять боль, я открою все это, и то самое, что "
+"от..."
+
+#: home/templates/index.html:245
+msgid "Free Shipping &amp; Return"
+msgstr "Бесплатная доставка и Возвращение"
+
+#: home/templates/index.html:246
+msgid "Free shipping on all US orders"
+msgstr "Бесплатная доставка для всех заказов в США"
+
+#: home/templates/index.html:250
+msgid "Money Guarantee"
+msgstr "Гарантия денег"
+
+#: home/templates/index.html:251
+msgid "30 days money back guarantee"
+msgstr "30-дневная гарантия возврата денег"
+
+#: home/templates/index.html:255
+msgid "Online Support"
+msgstr "Онлайн поддержка"
+
+#: home/templates/index.html:256
+msgid "We support online 24/7 on day"
+msgstr "Мы поддерживаем онлайн 24/7 в день"
+
+#: home/templates/index.html:260
+msgid "Secure Payments"
+msgstr "Безопасные платежи"
+
+#: home/templates/index.html:261
+msgid "All payment are Secured and trusted."
+msgstr "Все платежи безопасны и надежны."
+
+#: home/templates/product_detail.html:56
+msgid "Sale"
+msgstr "Распродажа"
+
+#: home/templates/product_detail.html:150
+msgid "Add to cart"
+msgstr "Добавить в корзину"
+
+#: home/templates/product_detail.html:172
+msgid "GETTING CLOSER! ONLY"
+msgstr "БЛИЖЕ! ТОЛЬКО"
+
+#: home/templates/product_detail.html:173
+msgid "AWAY FROM FREE SHIPPING!"
+msgstr "ОТ БЕСПЛАТНОЙ ДОСТАВКИ!"
+
+#: home/templates/product_detail.html:176
+msgid "ESTIMATED DELIVERY BETWEEN Wed. May 1 and Tue. May 7."
+msgstr "ПРЕДПОЛАГАЕМАЯ ДОСТАВКА В СР. 1 мая и вт. 7 мая."
+
+#: home/templates/product_detail.html:178
+msgid "PEOPLE ARE LOOKING FOR THIS PRODUCT"
+msgstr "ЛЮДИ ИЩУТ ЭТОТ ПРОДУКТ"
+
+#: home/templates/product_detail.html:190
+msgid "Safe Payment"
+msgstr "Безопасный платеж"
+
+#: home/templates/product_detail.html:190
+msgid "Pay with the world's most payment methods."
+msgstr "Платите с помощью большинства способов оплаты в мире."
+
+#: home/templates/product_detail.html:194
+msgid "Confidence"
+msgstr "Уверенность"
+
+#: home/templates/product_detail.html:194
+msgid "Protection covers your purchase and personal data."
+msgstr "Защита распространяется на вашу покупку и личные данные."
+
+#: home/templates/product_detail.html:200
+msgid "Worldwide Delivery"
+msgstr "Доставка по всему миру"
+
+#: home/templates/product_detail.html:201
+msgid "FREE &amp; fast shipping to over 200+ countries &amp; regions."
+msgstr "БЕСПЛАТНО & быстрая доставка в более чем 200+ стран. регионы."
+
+#: home/templates/product_detail.html:206
+msgid "Hotline"
+msgstr "Горячая линия"
+
+#: home/templates/product_detail.html:206
+msgid "Talk to help line for your question on 4141 456 789, 4125 666 888"
+msgstr ""
+"Позвоните в службу поддержки по вашему вопросу по телефонам 4141 456 789, "
+"4125 666 888."
+
+#: home/templates/product_detail.html:215
+msgid "Product Details"
+msgstr "информация о продукте"
+
+#: home/templates/product_detail.html:216
+msgid "Product Reviews"
+msgstr "Обзоры продуктов"
+
+#: home/templates/product_detail.html:217
+msgid "Size Chart"
+msgstr "Таблица размеров"
+
+#: home/templates/product_detail.html:247
+msgid "Name"
+msgstr "Имя"
+
+#: home/templates/product_detail.html:251
+msgid "Email"
+msgstr "Email"
+
+#: home/templates/product_detail.html:259
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: home/templates/product_detail.html:272
+msgid "Subject"
+msgstr "Предмет"
+
+#: home/templates/product_detail.html:280
+msgid "Body of Review"
+msgstr "Основная часть обзора"
+
+#: home/templates/product_detail.html:295
+msgid "You must be logged in post a review"
+msgstr "Вы должны быть авторизованы, чтобы оставить отзыв"
+
+#: home/templates/product_detail.html:431
+msgid "Related Products"
+msgstr "сопутствующие товары"
+
+#: home/templates/product_detail.html:432
+msgid ""
+"You can stop autoplay, increase/decrease aniamtion speed and number ofgrid "
+"to show and products from store admin."
+msgstr ""
+"Вы можете остановить автовоспроизведение, увеличить/уменьшить скорость "
+"анимации и количество отображаемых сеток и продуктов от администратора "
+"магазина."
+
+#: home/templates/product_detail.html:471
+msgid "Recently Viewed Product"
+msgstr "Недавно просмотренный продукт"
+
+#: home/templates/product_detail.html:472
+msgid ""
+"You can manage this section from store admin as describe in above section"
+msgstr ""
+"Вы можете управлять этим разделом из администратора магазина, как описано в "
+"разделе выше."

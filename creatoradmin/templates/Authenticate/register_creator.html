@@ -1,0 +1,117 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Melody Admin</title>
+  <link rel="stylesheet" href="{% static 'melody_static/vendors/iconfonts/font-awesome/css/all.min.css'%}">
+  <link rel="stylesheet" href="{% static 'melody_static/vendors/css/vendor.bundle.base.css'%}">
+  <link rel="stylesheet" href="{% static 'melody_static/vendors/css/vendor.bundle.addons.css'%}">
+  <link rel="stylesheet" href="{% static 'melody_static/css/style.css'%}">
+  <link rel="shortcut icon" href="{% static 'melody_static/images/favicon.png'%}" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
+        <div class="row flex-grow">
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="auth-form-transparent text-left p-3">
+              <div class="brand-logo">
+                <img src="{% static 'melody_static/images/logo.svg'%}" alt="logo">
+              </div>
+              <h4>New here?</h4>
+              <h6 class="font-weight-light">Join us today! It takes only few steps</h6>
+              <form class="pt-3" method="post">
+                  {% csrf_token %}
+                <div class="form-group">
+                  <label>{% trans 'Username'%}</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="fa fa-user text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="text" name="username" class="form-control form-control-lg border-left-0" placeholder="Username">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>First Name</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="fa fa-user text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="text" name="first_name" class="form-control form-control-lg border-left-0" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Lastname</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="fa fa-user text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="text" name="last_name" class="form-control form-control-lg border-left-0" placeholder="Lastname">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="far fa-envelope-open text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="email" name="email" class="form-control form-control-lg border-left-0" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="fa fa-lock text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="password" name="password1" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Confirm Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                      <span class="input-group-text bg-transparent border-right-0">
+                        <i class="fa fa-lock text-primary"></i>
+                      </span>
+                    </div>
+                    <input type="password" name="password2" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Confirm Password">
+                  </div>
+                </div>
+                  <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6 register-half-bg d-flex flex-row">
+            <p class="text-white font-weight-medium text-center flex-grow align-self-end">Copyright &copy; 2018  All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'melody_static/vendors/js/vendor.bundle.base.js'%}"></script>
+  <script src="{% static 'melody_static/vendors/js/vendor.bundle.addons.js'%}"></script>
+  <script src="{% static 'melody_static/js/off-canvas.js'%}"></script>
+  <script src="{% static 'melody_static/js/hoverable-collapse.js'%}"></script>
+  <script src="{% static 'melody_static/js/misc.js'%}"></script>
+  <script src="{% static 'melody_static/js/settings.js'%}"></script>
+  <script src="{% static 'melody_static/js/todolist.js'%}"></script>
+</body>
+
+</html>

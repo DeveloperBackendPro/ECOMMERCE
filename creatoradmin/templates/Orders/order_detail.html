@@ -1,0 +1,248 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Melody Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'melody_static/vendors/iconfonts/font-awesome/css/all.min.css'%}">
+  <link rel="stylesheet" href="{% static 'melody_static/vendors/css/vendor.bundle.base.css'%}">
+  <link rel="stylesheet" href="{% static 'melody_static/vendors/css/vendor.bundle.addons.css'%}">
+  <link rel="stylesheet" href="{% static 'melody_static/css/style.css'%}">
+  <link rel="shortcut icon" href="{% static 'melody_static/images/favicon.png'%}" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="{% url 'creator'%}"><img src="{% static 'melody_static/images/logo.svg'%}" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="{% url 'creator'%}"><img src="{% static 'melody_static/images/logo-mini.svg'%}" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item nav-search d-none d-md-flex">
+            <div class="nav-link">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+                  <form action="{% url 'searched'%}" method="post">
+                      {% csrf_token %}
+                        <input type="text" name="searched" class="form-control" placeholder="Search" aria-label="Search">
+                  </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+        <li class="nav-item d-none d-lg-flex">
+            <a class="nav-link" href="{% url 'addcategory'%}">
+              <span class="btn btn-primary">+ {% trans 'Create Category'%}</span>
+            </a>
+          </li>
+          <li class="nav-item d-none d-lg-flex">
+            <a class="nav-link" href="{% url 'addproduct'%}">
+              <span class="btn btn-primary">+ {% trans 'Create Product'%}</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <div class="nav-link">
+                <form class="form-inline" action="{% url 'selectlanguage_admin' %}" method="post">
+                        {% csrf_token %}
+                          <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language" onchange="submit()" style=" width: 130px; height: 35px; background-color: white;">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <noscript>
+                                <input type="submit" value="Set" />
+                            </noscript>
+                        </form>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="{{ creator.image.url }}" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="{% url 'user_update'%}" class="dropdown-item">
+                <i class="fas fa-cog text-primary"></i>
+                {% trans 'Update'%}
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="{% url 'logout_form'%}" class="dropdown-item">
+                <i class="fas fa-power-off text-primary"></i>
+                {% trans 'Logout'%}
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close fa fa-times"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles primary"></div>
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:../../partials/_sidebar.html -->
+      {% include 'Navbar/navbar.html'%}
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+
+            <nav aria-label="breadcrumb">
+
+            </nav>
+          </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="card px-2">
+
+                      <div class="card-body">
+                          <div class="container-fluid">
+                              <h3 class="text-right my-5">{% trans 'Code'%} : &nbsp;&nbsp;{{ orderproduct.order.code }}</h3>
+                              <img src="{{ orderproduct.product.image.url }}" width="160px" height="160px">
+                            <hr>
+                          </div>
+                          <div class="container-fluid d-flex justify-content-between">
+                            <div class="col-lg-3 pl-0">
+                              <p class="mt-5 mb-2">
+                                  <b>{% trans 'Order Address'%}</b>
+                              </p>
+                                <p>{% trans 'First Name'%}:  {{ orderproduct.order.first_name }}</p>
+                                <p>{% trans 'Lastname'%}:   {{ orderproduct.order.last_name }}</p>
+                                <p>{% trans 'Phone'%}: {{ orderproduct.order.phone }}</p>
+                                <p>{% trans 'Email'%}: {{ orderproduct.order.email }}</p>
+                                <p>{% trans 'Country'%}: {{ orderproduct.order.country }}</p>
+                                <p>{% trans 'City'%}: {{ orderproduct.order.city }}</p>
+                                <p>{% trans 'Address'%}: {{ orderproduct.order.address }}</p>
+                                <p>{% trans 'Feedback'%}: {{ orderproduct.order.feedback }}</p>
+                            </div>
+                            <div class="col-lg-3 pr-0">
+                              <p class="mt-5 mb-2 text-right"><b>Invoice to</b></p>
+                              <p class="text-right">Gaala & Sons,<br> C-201, Beykoz-34800,<br> Canada, K1A 0G9.</p>
+                            </div>
+                          </div>
+                          <div class="container-fluid d-flex justify-content-between">
+                            <div class="col-lg-3 pl-0">
+                              <p class="mb-0 mt-5">{% trans 'Create at'%} : {{ orderproduct.create_at }}</p>
+                              <p style="color: red;">{% trans 'Status'%} : {{ orderproduct.status }}</p>
+
+                               <form method="post">
+                                   {% csrf_token %}
+                                   <div class="form-group">
+                                        <label for="exampleSelectGender">{% trans 'Status'%}</label>
+                                        <select class="form-control" name="status">
+                                            <option {{ form.status }}></option>
+                                        </select>
+                                    </div>
+                                   <input type="submit">
+                               </form>
+
+                            </div>
+                          </div>
+                          <div class="container-fluid mt-5 d-flex justify-content-center w-100">
+                            <div class="table-responsive w-100">
+                                <table class="table table-hover">
+                                      <thead class="thead-dark">
+                                        <tr>
+                                          <th scope="col">{% trans 'Product'%}</th>
+                                          <th scope="col">{% trans 'Native Price'%}</th>
+                                          <th scope="col">{% trans 'QTY'%}</th>
+                                          <th scope="col">{% trans 'Total'%}</th>
+                                          <th scope="col">{% trans 'Size'%}</th>
+                                          <th scope="col">{% trans 'Collar'%}</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th>
+                                              {{ orderproduct.product.title }}
+                                          </th>
+                                          <td>{{ orderproduct.product.sell_price }} sum</td>
+                                          <td>{{ orderproduct.order.total_quantity }}</td>
+                                          <td>{{ orderproduct.order.total }} sum</td>
+                                            <td>{{ orderproduct.order.size }}</td>
+                                          <td style="background-color: {{ orderproduct.order.collar }};width: 20px; height: 20px;"></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                          </div>
+                          <div class="container-fluid mt-5 w-100">
+                            <p class="text-right mb-2">{% trans 'Subtotal amount'%}: {{ orderproduct.order.total_quantity }}</p>
+                            <h4 class="text-right mb-5">{% trans 'Total'%} : {{ orderproduct.order.total }} sum</h4>
+                            <hr>
+                          </div>
+
+                          <div class="container-fluid w-100">
+                            <a href="{% url 'order_delate' pk=orderproduct.pk %}" class="btn btn-primary float-right mt-4 ml-2"><i class="fa fa-print mr-1"></i>{% trans 'Delete'%}</a>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="far fa-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <script src="{% static 'melody_static/vendors/js/vendor.bundle.base.js'%}"></script>
+  <script src="{% static 'melody_static/vendors/js/vendor.bundle.addons.js'%}"></script>
+  <script src="{% static 'melody_static/js/off-canvas.js'%}"></script>
+  <script src="{% static 'melody_static/js/hoverable-collapse.js'%}"></script>
+  <script src="{% static 'melody_static/js/misc.js'%}"></script>
+  <script src="{% static 'melody_static/js/settings.js'%}"></script>
+  <script src="{% static 'melody_static/js/todolist.js'%}"></script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Melody Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static "melody_static/vendors/iconfonts/font-awesome/css/all.min.css"%}">
+  <link rel="stylesheet" href="{% static "melody_static/vendors/css/vendor.bundle.base.css"%}">
+  <link rel="stylesheet" href="{% static "melody_static/vendors/css/vendor.bundle.addons.css"%}">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static "melody_static/css/style.css"%}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'melody_static/images/favicon.png'%}" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="{% url 'creator'%}"><img src="{% static 'melody_static/images/logo.svg'%}" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="{% url 'creator'%}"><img src="{% static 'melody_static/images/logo-mini.svg'%}" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item nav-search d-none d-md-flex">
+            <div class="nav-link">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+                  <form action="{% url 'searched'%}" method="post">
+                      {% csrf_token %}
+                        <input type="text" name="searched" class="form-control" placeholder="Search" aria-label="Search">
+                  </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+        <li class="nav-item d-none d-lg-flex">
+            <a class="nav-link" href="{% url 'addcategory'%}">
+              <span class="btn btn-primary">+ {% trans 'Create Category'%}</span>
+            </a>
+          </li>
+          <li class="nav-item d-none d-lg-flex">
+            <a class="nav-link" href="{% url 'addproduct'%}">
+              <span class="btn btn-primary">+ {% trans 'Create Product'%}</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <div class="nav-link">
+                <form class="form-inline" action="{% url 'selectlanguage_admin' %}" method="post">
+                        {% csrf_token %}
+                          <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language" onchange="submit()" style=" width: 130px; height: 35px; background-color: white;">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <noscript>
+                                <input type="submit" value="Set" />
+                            </noscript>
+                        </form>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="{{ creator.image.url }}" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="{% url 'user_update'%}" class="dropdown-item">
+                <i class="fas fa-cog text-primary"></i>
+                {% trans 'Update'%}
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="{% url 'logout_form'%}" class="dropdown-item">
+                <i class="fas fa-power-off text-primary"></i>
+                {% trans 'Logout'%}
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close fa fa-times"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles primary"></div>
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      {% include 'Navbar/navbar.html'%}
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+          </div>
+          <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">{% trans 'Slider'%}</h4>
+                  <p class="card-description">
+                  </p>
+                  <form class="forms-sample" method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+
+                    <div class="form-group">
+                      <label for="exampleInputName1">{% trans 'Title EN'%}</label>
+                      <input type="text" name="title_en"  class="form-control" id="exampleInputName1" placeholder="Title EN">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputName1">{% trans 'Title RU'%}</label>
+                      <input type="text" name="title_ru"  class="form-control" id="exampleInputName1" placeholder="Title RU">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputName1">{% trans 'Title UZ'%}</label>
+                      <input type="text" name="title_uz"  class="form-control" id="exampleInputName1" placeholder="Title UZ">
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label>{% trans 'Image'%}</label>
+                      <input type="file" name="image" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <input type="text" name="image" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-primary" name="image" type="button">{% trans 'Upload'%}</button>
+                        </span>
+                      </div>
+                    </div>
+
+
+
+                     <div class="form-group">
+                        <label for="exampleSelectGender">{% trans 'Status'%}</label>
+                        <select class="form-control" name="status">
+                            <option {{ form.status }}></option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label for="exampleTextarea1">{% trans 'Description EN'%}</label>
+                      <textarea name="description_en" class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleTextarea1">{% trans 'Description RU'%}</label>
+                      <textarea name="description_ru" class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleTextarea1">{% trans 'Description UZ'%}</label>
+                      <textarea name="description_uz" class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                    </div>
+                      <button type="submit" class="btn btn-primary mr-2">{% trans 'Submit'%}</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="far fa-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static "melody_static/vendors/js/vendor.bundle.base.js"%}"></script>
+  <script src="{% static "melody_static/vendors/js/vendor.bundle.addons.js"%}"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="{% static "melody_static/js/off-canvas.js"%}"></script>
+  <script src="{% static "melody_static/js/hoverable-collapse.js"%}"></script>
+  <script src="{% static "melody_static/js/misc.js"%}"></script>
+  <script src="{% static "melody_static/js/settings.js"%}"></script>
+  <script src="{% static "melody_static/js/todolist.js"%}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static "melody_static/js/file-upload.js"%}"></script>
+  <script src="{% static "melody_static/js/typeahead.js"%}"></script>
+  <script src="{% static "melody_static/js/select2.js"%}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+</html>

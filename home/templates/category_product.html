@@ -1,0 +1,130 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Women &ndash; Belle Multipurpose Bootstrap 4 Template</title>
+<meta name="description" content="description">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="{% static 'assets/images/favicon.png'%}" />
+<link rel="stylesheet" href="{% static 'assets/css/plugins.css'%}">
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+<link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+<link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+</head>
+<body class="template-collection belle">
+    {% include 'header.html'%}
+    <div id="page-content">
+        <div class="collection-header">
+			<div class="collection-hero">
+        		<div class="collection-hero__image"><img class="blur-up lazyload" data-src="{% static 'assets/images/cat-women2.jpg'%}" src="{% static 'assets/images/cat-women2.jpg'%}" alt="Women" title="Women" /></div>
+        		<div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width"></h1></div>
+      		</div>
+		</div>
+        <div class="container">
+        	<div class="row">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 sidebar filterbar">
+                	<div class="closeFilter d-block d-md-none d-lg-none"><i class="icon icon anm anm-times-l"></i></div>
+                	<div class="sidebar_tags">
+                        <div class="sidebar_widget categories filter-widget">
+                            <div class="widget-title"><h2>{% trans 'Category'%}</h2></div>
+                            <div class="widget-content">
+                                <ul class="sidebar_categories">
+                                    {% for rs in category %}
+                                    <li class="level1 sub-level"><a href="{% url 'category_product' rs.id rs.slug %}" class="site-nav">{{ rs.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+						<div class="sidebar_widget">
+                        	<div class="widget-title"><h2>{% trans 'Popular Products'%}</h2></div>
+							<div class="widget-content">
+                                <div class="list list-sidebar-products">
+                                  <div class="grid">
+                                    <div class="grid__item">
+                                        {% for rs in product_latest %}
+                                      <div class="mini-list-item">
+                                        <div class="mini-view_image">
+                                            <a class="grid-view-item__link" href="{% url 'produc_details' rs.id rs.slug %}">
+                                                <img class="grid-view-item__image" src="{{ rs.image.url }}" alt="" />
+                                            </a>
+                                        </div>
+                                        <div class="details"> <a class="grid-view-item__title" href="{% url 'produc_details' rs.id rs.slug %}">{{ rs.title }}</a>
+                                          <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">{{ rs.sell_price }} sum</span></span></div>
+                                        </div>
+                                      </div>
+                                        {% endfor %}
+                                    </div>
+                                  </div>
+                                </div>
+                          	</div>
+						</div>
+                        <div class="sidebar_widget static-banner">
+                        	<img src="{% static 'assets/images/side-banner-2.jpg'%}" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
+                	<div class="category-description">
+                    	<h3>{% trans 'Category Description'%}</h3>
+                        <p>{{ categoryies.description }}</p>
+                    </div>
+                <p>{% trans 'showing'%} :{{ category_count }}</p>
+                    <hr>
+                	<div class="productList">
+                        <div class="grid-products grid--view-items">
+                            <div class="row">
+                                {% for rs in product %}
+                                <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                    <div class="product-image">
+                                        <a href="{% url 'produc_details' rs.id rs.slug %}">
+                                            <img class="" data-src="{{ rs.image.url }}" src="{{ rs.image.url }}" alt="image" title="product">
+                                            <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="product-details text-center">
+                                        <div class="product-name">
+                                            <a href="{% url 'produc_details' rs.id rs.slug %}">{{ rs.title }}</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="old-price">{{ rs.old_price }} sum</span>
+                                            <span class="price">{{ rs.sell_price }} sum</span>
+                                        </div>
+                                        <div class="product-review">
+                                            <i class='font-13 fa fa-star{% if rs.avaregereview < 1 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if rs.avaregereview < 2 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if rs.avaregereview < 3 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if rs.avaregereview < 4 %}-o empty{% endif%}'></i>
+                                            <i class='font-13 fa fa-star{% if rs.avaregereview < 5 %}-o empty{% endif%}'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="clear">
+                    <div class="pagination">
+                     {% include 'paginator.html' with page=product %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html'%}
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.cookie.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/wow.min.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'assets/js/plugins.js'%}"></script>
+    <script src="{% static 'assets/js/popper.min.js'%}"></script>
+    <script src="{% static 'assets/js/lazysizes.js'%}"></script>
+    <script src="{% static 'assets/js/main.js'%}"></script>
+</body>
+</html>

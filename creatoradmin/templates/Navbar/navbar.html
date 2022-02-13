@@ -1,0 +1,226 @@
+{% load static %}
+{% load i18n %}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img src="{{ creator.image.url }}" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  {{ creator.user.username }}
+                </p>
+                <p class="designation">
+                  Super Admin
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'creator'%}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">{% trans 'Dashboard'%}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'addinformatsions'%}">
+                <i class="fas fa-wrench menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Info'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'informatsion_update'%}">
+                <i class="fas fa-wrench menu-icon"></i>
+              <span class="menu-title">{% trans 'Update Info'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'addcategory'%}">
+                <i class="fas fa-gem  menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Category'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'category_update'%}">
+                <i class="fas fa-gem  menu-icon"></i>
+              <span class="menu-title">{% trans 'Update Category'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'addproduct'%}">
+                <i class="fas fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Product'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'product_update'%}">
+                <i class="fas fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">{% trans 'Update Product'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'apandslider'%}">
+                <i class="fab fa-slideshare menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Slider'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'slider_update'%}">
+                <i class="fab fa-slideshare menu-icon"></i>
+              <span class="menu-title">{% trans 'Slider Update'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'order_all'%}">
+                <i class="fas fa-sort-amount-up menu-icon"></i>
+              <span class="menu-title">{% trans 'Orders'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'apanddetail'%}">
+                <i class="fas fa-atlas menu-icon"></i>
+              <span class="menu-title">{% trans 'Product Details'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'details_update'%}">
+                <i class="fas fa-atlas menu-icon"></i>
+              <span class="menu-title">{% trans 'Details update'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'apandblog'%}">
+                <i class="fas fa-th-large menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Blog'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog_update'%}">
+                <i class="fas fa-th-large menu-icon"></i>
+              <span class="menu-title">{% trans 'Blog Update'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'apandabout'%}">
+                <i class="fas fa-archway menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Aboutus'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about_update'%}">
+                <i class="fas fa-archway menu-icon"></i>
+              <span class="menu-title">{% trans 'About Update'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'apandfaqs'%}">
+                <i class="fas fa-question-circle menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Faq'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'faq_update'%}">
+                <i class="fas fa-question-circle menu-icon"></i>
+              <span class="menu-title">{% trans 'Faq Update'%}</span>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'newslatter_get'%}">
+                <i class="fas fa-at menu-icon"></i>
+              <span class="menu-title">{% trans 'Newslatter'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact_get'%}">
+                <i class="fas fa-rss menu-icon"></i>
+              <span class="menu-title">{% trans 'Contact'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'comment_blog_get'%}">
+                <i class="fas fa-comments menu-icon"></i>
+              <span class="menu-title">{% trans 'Comment Blog'%}</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'comment_product_get'%}">
+                <i class="fas fa-comments menu-icon"></i>
+              <span class="menu-title">{% trans 'Comment Product'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'product_gallery'%}">
+                <i class="fas fa-tshirt menu-icon"></i>
+              <span class="menu-title">{% trans 'Product Gallery'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'users_get' %}">
+                <i class="fas fa-users-cog menu-icon"></i>
+              <span class="menu-title">{% trans 'User Permission'%}</span>
+            </a>
+          </li>
+
+
+         <li class="nav-item">
+            <a class="nav-link" href="{% url 'register_creator' %}">
+                <i class="fas fa-user-shield menu-icon"></i>
+              <span class="menu-title">{% trans 'Create Creator'%}</span>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_update'%}">
+                <i class="fas fa-pen-square menu-icon"></i>
+                <span class="menu-title">{% trans 'Update Admin'%}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_password'%}">
+                <i class="fas fa-exchange-alt menu-icon"></i>
+                <span class="menu-title">{% trans 'Change Password'%}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout_form'%}">
+                <i class="fas fa-sign-out-alt menu-icon"></i>
+              <span class="menu-title">{% trans 'Logout'%}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>

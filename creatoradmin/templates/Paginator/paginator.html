@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cental palace</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body >
+        {% if page.has_other_pages %}
+            <div class="text-center">
+        <ul class="pagination">
+            {% if page.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}" style="" ><i class="fas fa-arrow-left"></i></a></li>
+            {% else %}
+              <li class="page-item"><a class="page-link" href="#"><i class="fas fa-arrow-left"></i>
+              </a></li>
+            {% endif %}
+            {% for i in page.paginator.page_range %}
+              {% if page.number == i %}
+                <li class="page-item"><a class="page-link" href="#" style="background-color: #18ADAD; color: white;">{{i}}</a></li>
+              {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if page.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}" style=""><i class="fas fa-arrow-right"></i></a></li>
+            {% else %}
+               <li class="page-item"><a class="page-link" href="#"></a></li>
+            {% endif %}
+          </ul>
+            </div>
+        {% endif %}
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+</body>
+</html>
