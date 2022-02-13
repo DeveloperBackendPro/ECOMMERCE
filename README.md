@@ -20,3 +20,6 @@ sudo apt install gettext ### GETTEXT FOR LINUX
 
 https://mlocati.github.io/articles/gettext-iconv-windows.html ## GETTEXT FOR WINDOWS
 # ECOMMERCE
+
+
+# DONE ;)
